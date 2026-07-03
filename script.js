@@ -1,8 +1,8 @@
 const translations = {
   zh: {
-    "meta.title": "刘峰宇 | 企业应用全栈开发作品集",
-    "meta.description": "刘峰宇的在线作品集：企业应用开发、生产级 ERP 系统、全栈交付、微信小程序与 Corp IT 工作流。",
-    "person.name": "刘峰宇",
+    "meta.title": "蕴宇 | 企业应用全栈开发作品集",
+    "meta.description": "蕴宇的在线作品集：企业应用开发、生产级 ERP 系统、全栈交付、微信小程序与 Corp IT 工作流。",
+    "person.name": "蕴宇",
     "nav.skip": "跳到主要内容",
     "nav.homeAria": "返回首页",
     "nav.aria": "主导航",
@@ -99,7 +99,7 @@ const translations = {
     "contact.eyebrow": "Contact",
     "contact.title": "面向 Software Developer / IT Application System Engineer / ERP 应用开发",
     "contact.lead": "适合需要全栈开发、内部应用支持、ERP 周边开发、SQL 排查、流程自动化、文档沉淀和跨职能沟通的岗位。",
-    "footer.copy": "© 2026 刘峰宇",
+    "footer.copy": "© 2026 蕴宇",
     "modal.closeAria": "关闭大图",
     "alt.orderingBoss": "点餐系统老板视图数据看板",
     "alt.forumList": "看雪校园论坛小程序帖子列表",
@@ -114,9 +114,9 @@ const translations = {
     "alt.zentaoTask": "禅道具体任务截图"
   },
   en: {
-    "meta.title": "Liu Fengyu | Enterprise Application Portfolio",
-    "meta.description": "Liu Fengyu's portfolio: enterprise applications, production ERP systems, full-stack delivery, WeChat mini-programs, and Corp IT workflows.",
-    "person.name": "Liu Fengyu",
+    "meta.title": "YunYu | Enterprise Application Portfolio",
+    "meta.description": "YunYu's portfolio: enterprise applications, production ERP systems, full-stack delivery, WeChat mini-programs, and Corp IT workflows.",
+    "person.name": "YunYu",
     "nav.skip": "Skip to main content",
     "nav.homeAria": "Back to home",
     "nav.aria": "Primary navigation",
@@ -171,7 +171,7 @@ const translations = {
     "p2.b3": "The delivery chain covers requirement analysis, launch, and post-launch maintenance, not just a demo.",
     "p2.link": "Project Page",
     "p3.kicker": "Internal ERP product | Jun 2026",
-    "p3.title": "Yunyu Software Company ERP Management System",
+    "p3.title": "YunYu Software Company ERP Management System",
     "p3.desc": "An internal management system for small software teams and independent studios, designed to systematize customer acquisition, customers, contracts, sales, projects, tasks, performance, knowledge base, and income/expense workflows.",
     "p3.b1": "Modules cover company, employees, performance, customers, service providers, finance, sales, projects, tasks, and knowledge base.",
     "p3.b2": "Admin pages include login, customer management, contract display, project management, task association, and knowledge-base space.",
@@ -213,7 +213,7 @@ const translations = {
     "contact.eyebrow": "Contact",
     "contact.title": "Targeting Software Developer / IT Application System Engineer / ERP Application roles",
     "contact.lead": "A good fit for roles involving full-stack development, internal application support, ERP-adjacent development, SQL troubleshooting, workflow automation, documentation, and cross-functional communication.",
-    "footer.copy": "© 2026 Liu Fengyu",
+    "footer.copy": "© 2026 YunYu",
     "modal.closeAria": "Close large image",
     "alt.orderingBoss": "Owner dashboard of the ordering system",
     "alt.forumList": "Post list page of the Kanxue Campus mini-program",
@@ -222,8 +222,8 @@ const translations = {
     "alt.architecture": "Architecture diagram of the ordering system",
     "alt.forumLogin": "Login page of Kanxue Campus",
     "alt.forumDetail": "Post detail page of Kanxue Campus",
-    "alt.erpLogin": "Login page of Yunyu ERP",
-    "alt.erpProject": "Project management page of Yunyu ERP",
+    "alt.erpLogin": "Login page of YunYu ERP",
+    "alt.erpProject": "Project management page of YunYu ERP",
     "alt.zentaoStats": "ZenTao completed task count statistics",
     "alt.zentaoTask": "Specific ZenTao task screenshot"
   }
@@ -257,14 +257,14 @@ const galleryItems = [
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "个人中心", en: "Personal Center" }, src: "assets/images/forum/forum-05.webp", shape: "phone" },
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "帖子详情", en: "Post Detail" }, src: "assets/images/forum/forum-06.webp", shape: "phone" },
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "帖子列表", en: "Post List" }, src: "assets/images/forum/forum-07.webp", shape: "phone" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "人事绩效薪资统计", en: "HR Performance and Salary Statistics" }, src: "assets/images/yunyu-erp/yunyu-erp-01.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "合同展示列表", en: "Contract List" }, src: "assets/images/yunyu-erp/yunyu-erp-02.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "合同详情展示", en: "Contract Detail" }, src: "assets/images/yunyu-erp/yunyu-erp-03.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "客户管理模块", en: "Customer Management Module" }, src: "assets/images/yunyu-erp/yunyu-erp-04.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "登录页", en: "Login Page" }, src: "assets/images/yunyu-erp/yunyu-erp-05.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "知识库空间", en: "Knowledge-Base Space" }, src: "assets/images/yunyu-erp/yunyu-erp-06.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "项目关联任务管理", en: "Project-Task Association" }, src: "assets/images/yunyu-erp/yunyu-erp-07.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "Yunyu ERP" }, title: { zh: "项目管理", en: "Project Management" }, src: "assets/images/yunyu-erp/yunyu-erp-08.webp" }
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "人事绩效薪资统计", en: "HR Performance and Salary Statistics" }, src: "assets/images/yunyu-erp/yunyu-erp-01.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同展示列表", en: "Contract List" }, src: "assets/images/yunyu-erp/yunyu-erp-02.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同详情展示", en: "Contract Detail" }, src: "assets/images/yunyu-erp/yunyu-erp-03.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "客户管理模块", en: "Customer Management Module" }, src: "assets/images/yunyu-erp/yunyu-erp-04.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "登录页", en: "Login Page" }, src: "assets/images/yunyu-erp/yunyu-erp-05.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "知识库空间", en: "Knowledge-Base Space" }, src: "assets/images/yunyu-erp/yunyu-erp-06.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目关联任务管理", en: "Project-Task Association" }, src: "assets/images/yunyu-erp/yunyu-erp-07.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目管理", en: "Project Management" }, src: "assets/images/yunyu-erp/yunyu-erp-08.webp" }
 ];
 
 const galleryGrid = document.querySelector("#galleryGrid");
