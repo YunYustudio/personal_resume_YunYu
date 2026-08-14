@@ -1,0 +1,6 @@
+# WorkBuddy 本地项目数据（记忆/元数据，不入库）
+.workbuddy/
+
+# OS 垃圾文件
+.DS_Store
+Thumbs.db

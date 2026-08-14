@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>生鲜商城小程序 · 开发文档总索引</title>
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --bg-soft: #111726;
+        --paper: rgba(20, 27, 42, 0.72);
+        --line: rgba(139, 233, 255, 0.18);
+        --cyan: #8be9ff;
+        --pink: #ff8fbc;
+        --gold: #ffd166;
+        --green: #7ee787;
+        --text: #e7ecf5;
+        --muted: #9aa6bd;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 600px at 12% -10%, rgba(139, 233, 255, 0.10), transparent 60%),
+          radial-gradient(1000px 500px at 100% 0%, rgba(255, 143, 188, 0.10), transparent 55%),
+          var(--bg);
+        line-height: 1.65;
+      }
+      a { color: var(--cyan); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Top nav */
+      .topnav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        align-items: center;
+        padding: 10px 20px;
+        background: rgba(11, 15, 23, 0.82);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topnav .brand {
+        font-weight: 700;
+        color: var(--text);
+        margin-right: auto;
+        letter-spacing: 0.5px;
+      }
+      .topnav a {
+        color: var(--muted);
+        font-size: 14px;
+        padding: 4px 8px;
+        border-radius: 8px;
+      }
+      .topnav a:hover { color: var(--text); background: rgba(139, 233, 255, 0.08); text-decoration: none; }
+
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px 80px; }
+
+      /* Header */
+      header.hero {
+        padding: 54px 0 30px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 34px;
+      }
+      .eyebrow {
+        color: var(--cyan);
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.15;
+        background: linear-gradient(90deg, var(--cyan), var(--pink) 70%, var(--gold));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lede { color: var(--muted); max-width: 760px; margin: 0; font-size: 16px; }
+      .badges { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+      .badge {
+        font-size: 13px;
+        padding: 5px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--paper);
+        color: var(--muted);
+      }
+      .badge b { color: var(--text); font-weight: 600; }
+
+      section { margin: 46px 0; }
+      h2 {
+        font-size: 22px;
+        margin: 0 0 18px;
+        padding-left: 12px;
+        border-left: 4px solid var(--cyan);
+      }
+      h2 .sub { color: var(--muted); font-size: 14px; font-weight: 400; margin-left: 10px; }
+
+      /* Tech stack table */
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .table th, .table td {
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(139, 233, 255, 0.10);
+        font-size: 14px;
+        vertical-align: top;
+      }
+      .table th { color: var(--cyan); font-weight: 600; background: rgba(139, 233, 255, 0.05); }
+      .table tr:last-child td { border-bottom: none; }
+      code {
+        font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+        background: rgba(139, 233, 255, 0.10);
+        color: var(--gold);
+        padding: 1px 6px;
+        border-radius: 6px;
+        font-size: 13px;
+      }
+
+      /* Category grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(139, 233, 255, 0.45);
+        box-shadow: 0 14px 34px rgba(139, 233, 255, 0.12);
+      }
+      .card .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px; height: 38px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #06121b;
+        background: linear-gradient(135deg, var(--cyan), var(--pink));
+        margin-bottom: 10px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 16px; }
+      .card p.desc { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+      .doclist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+      .doclist li { font-size: 13.5px; }
+      .doclist li.sql { color: var(--green); }
+      .doclist .tag {
+        font-size: 11px;
+        color: var(--gold);
+        border: 1px solid rgba(255, 209, 102, 0.4);
+        border-radius: 6px;
+        padding: 0 6px;
+        margin-left: 6px;
+      }
+      .doclist .tag.sql { color: var(--green); border-color: rgba(126, 231, 135, 0.4); }
+
+      /* Must-read highlights */
+      .must {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 14px;
+      }
+      .must .card { border-color: rgba(255, 209, 102, 0.35); }
+      .must .card:hover { border-color: rgba(255, 209, 102, 0.7); box-shadow: 0 14px 34px rgba(255, 209, 102, 0.12); }
+      .star { color: var(--gold); }
+
+      /* Decisions & changes */
+      .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      @media (max-width: 760px) { .notes { grid-template-columns: 1fr; } }
+      .panel {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px 22px;
+      }
+      .panel ol, .panel ul { margin: 0; padding-left: 20px; }
+      .panel li { margin: 8px 0; font-size: 14px; }
+      .panel li b { color: var(--text); }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 26px 20px 40px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      .back { display: inline-block; margin-top: 14px; }
+    </style>
+  </head>
+  <body>
+    <nav class="topnav">
+      <span class="brand">🛒 生鲜商城 · 文档索引</span>
+      <a href="#intro">简介</a>
+      <a href="#stack">技术栈</a>
+      <a href="#map">文档地图</a>
+      <a href="#must">必读</a>
+      <a href="#decisions">设计决策</a>
+      <a href="#changes">近期变更</a>
+      <a href="../index.html">← 返回作品集</a>
+    </nav>
+
+    <div class="wrap">
+      <header class="hero">
+        <p class="eyebrow">Fresh Mall · Dev Docs Index</p>
+        <h1>生鲜商城小程序 · 开发文档总索引</h1>
+        <p class="lede">
+          本目录是「生鲜商城小程序」全栈项目（后端 <code>Mall_YunYu</code> / PC 后台 <code>soybean-admin</code> / 微信小程序 <code>uni_free_mall</code>）的<strong>唯一权威文档入口</strong>。
+          按下方分类地图定位所需文档，避免在海量的参考源码中迷路。
+        </p>
+        <div class="badges">
+          <span class="badge">最后更新：<b>2026-08-14</b></span>
+          <span class="badge">定位：<b>个人主体 · 体验/演示版</b></span>
+          <span class="badge">文档分类：<b>13 类</b></span>
+          <span class="badge">后端接口：<b>约 84 个</b></span>
+        </div>
+      </header>
+
+      <section id="intro">
+        <h2>〇、项目简介</h2>
+        <p class="lede">
+          一套面向生鲜（果蔬 / 肉禽 / 水产 / 日配）零售场景的全栈电商系统：
+        </p>
+        <ul style="color: var(--muted); max-width: 820px;">
+          <li><b style="color: var(--text)">C 端微信小程序</b>（<code>uni_free_mall</code>）：商品浏览、购物车、下单、支付、订单跟踪、售后退款、个人中心。</li>
+          <li><b style="color: var(--text)">PC 运营后台</b>（<code>soybean-admin</code>）：商品 / 订单 / 店铺配置 / 内容 Banner / 服务保障 / 数据大屏。</li>
+          <li><b style="color: var(--text)">后端服务</b>（<code>Mall_YunYu</code>）：统一 API、鉴权、支付与退款、定时任务、系统配置。</li>
+        </ul>
+        <p style="color: var(--muted); font-size: 14px;">
+          ⚠️ 安全红线：任何真实密钥（微信支付 <code>APIv3Key</code> / <code>appSecret</code>、COS <code>SecretKey</code>、商户号等）一律不进提交的配置文件、不进 Gitee；密钥存 <code>sys_config</code> 表（AES 密文），yml 仅保留 <code>${...:}</code> 占位兜底。
+        </p>
+      </section>
+
+      <section id="stack">
+        <h2>一、技术栈一览</h2>
+        <table class="table">
+          <thead>
+            <tr><th>层</th><th>技术</th><th>说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>后端</td><td>Spring Boot 3.3.4 / JDK 21</td><td>MyBatis-Plus 3.5.7、Sa-Token 鉴权、wxjava 4.6.0 微信 SDK</td></tr>
+            <tr><td>PC 后台</td><td>Vue 3 + Vite + Naive UI</td><td>soybean-admin 架构，elegant-router 自动生成路由与类型</td></tr>
+            <tr><td>小程序</td><td>uni-app（Vue 3）</td><td>HBuilderX 发行，多端编译（当前主要为微信小程序）</td></tr>
+            <tr><td>数据库</td><td>MySQL 8.0</td><td>库名 <code>fresh_mall</code></td></tr>
+            <tr><td>支付</td><td>微信支付（JSAPI）</td><td>含真实链路 + 模拟支付开关（演示用）</td></tr>
+            <tr><td>部署</td><td>jar 直接运行 / Nginx 反代</td><td>后端端口 8080，dev + prod 双 profile</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="map">
+        <h2>二、文档地图 <span class="sub">按开发顺序阅读，仅展示文档名（不提供跳转）</span></h2>
+        <div class="grid">
+
+          <article class="card">
+            <span class="num">01</span>
+            <h3>需求调研</h3>
+            <p class="desc">开发者分析口语化（需求来源与取舍）</p>
+            <ul class="doclist">
+              <li>需求调研分析 0808</li>
+              <li>小程序 uniapp 源码开发</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">02</span>
+            <h3>架构与详细设计</h3>
+            <p class="desc">架构、详细设计、数据库设计、UIUX</p>
+            <ul class="doclist">
+              <li>架构设计文档 <span class="tag">核心</span></li>
+              <li>数据库设计文档 <span class="tag">核心</span></li>
+              <li>详细设计文档</li>
+              <li>前端工程架构与近期改动补充</li>
+              <li>地址模块 · 省市区民政部数据替换</li>
+              <li>小程序 UIUX 设计文档</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">03</span>
+            <h3>接口与 API</h3>
+            <p class="desc">全部后端接口清单（路径 / 鉴权 / DTO）</p>
+            <ul class="doclist">
+              <li>API 接口清单 <span class="tag">核心 · 84 接口</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">04</span>
+            <h3>支付与交易</h3>
+            <p class="desc">支付/订单/退款/仅退款/部分退款全链路专题</p>
+            <ul class="doclist">
+              <li>支付订单完整业务流程技术文档 <span class="tag">⭐ 最权威</span></li>
+              <li>待发货仅退款 · 业务逻辑设计</li>
+              <li>部分退款 · 完整方案实现说明</li>
+              <li>待发货仅退款 · 代码审查与修复</li>
+              <li>支付模块生产级完善方案</li>
+              <li>支付模块通用闭环开发文档</li>
+              <li>支付订单重点逻辑功能技术说明</li>
+              <li>后台订单管理功能详细设计</li>
+              <li>客户开通微信支付商户号操作指引</li>
+              <li class="sql">支付订单模块建表 SQL <span class="tag sql">SQL</span></li>
+              <li class="sql">refund_order 待发货仅退款迁移 <span class="tag sql">SQL</span></li>
+              <li class="sql">refund_order 退款失败状态 ALTER <span class="tag sql">SQL</span></li>
+              <li class="sql">演示模式清理 SQL <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">05</span>
+            <h3>商品与库存</h3>
+            <p class="desc">商品建表、库存分离、价格改造、种子数据</p>
+            <ul class="doclist">
+              <li>库存分离 · 总览</li>
+              <li>移动加权平均法</li>
+              <li class="sql">fresh_mall 建表 SQL <span class="tag sql">SQL · 全新库执行</span></li>
+              <li class="sql">真实生鲜商品种子数据 <span class="tag sql">SQL</span></li>
+              <li class="sql">库存分离 建表与迁移 <span class="tag sql">SQL</span></li>
+              <li class="sql">生鲜商城价格字段改造 <span class="tag sql">SQL</span></li>
+              <li class="sql">goods_spu_detail JSON 修正 <span class="tag sql">SQL</span></li>
+              <li class="sql">清洗 goods_spu_detail 为纯文本 <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">06</span>
+            <h3>运营店铺与客服</h3>
+            <p class="desc">店铺配置、服务保障、客服二维码、运营大屏</p>
+            <ul class="doclist">
+              <li>客服二维码模块 · 说明</li>
+              <li>运营大屏指标清单与 SQL 实现</li>
+              <li class="sql">shop_config 改造迁移 <span class="tag sql">SQL</span></li>
+              <li class="sql">shop_config 营业时间字段 ALTER <span class="tag sql">SQL</span></li>
+              <li class="sql">shop_qrcode 客服与粉丝群二维码 <span class="tag sql">SQL</span></li>
+              <li class="sql">shop_service_item 合并迁移 <span class="tag sql">SQL</span></li>
+              <li class="sql">今日推荐 建表与每日刷新 <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">07</span>
+            <h3>用户与登录</h3>
+            <p class="desc">C 端用户表、微信登录逻辑</p>
+            <ul class="doclist">
+              <li>登录逻辑优化总结</li>
+              <li class="sql">建表 user（C 端用户） <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">08</span>
+            <h3>工程规范与审查</h3>
+            <p class="desc">工程规则、代码审查报告</p>
+            <ul class="doclist">
+              <li>代码审查工程规则</li>
+              <li>后端代码审查报告</li>
+              <li>后端开发工程师规则</li>
+              <li>接口与功能完整性审查</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">09</span>
+            <h3>系统配置</h3>
+            <p class="desc">sys_config 建表 / 字段补齐 / 演示开关迁移</p>
+            <ul class="doclist">
+              <li class="sql">sys_config pay_demo 字段补齐 <span class="tag sql">SQL · 幂等</span></li>
+              <li class="sql">sys_config 字段补齐 ALTER <span class="tag sql">SQL</span></li>
+              <li class="sql">sys_config 新增迁移 <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">10</span>
+            <h3>参考源码</h3>
+            <p class="desc">第三方 / 官方 Demo 参考（不随业务改动）</p>
+            <ul class="doclist">
+              <li>微信 SDK 商业化支付开发文档</li>
+              <li>支付相关代码清单</li>
+              <li>核心技术总结 · 登录文档</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">11</span>
+            <h3>数据库修复脚本</h3>
+            <p class="desc">活库结构漂移修复（id 缺自增 / 乐观锁列 / 购物车联动列）</p>
+            <ul class="doclist">
+              <li class="sql">全库 id 自增补齐 <span class="tag sql">SQL · 首推</span></li>
+              <li class="sql">order_info id 自增修复 <span class="tag sql">SQL</span></li>
+              <li class="sql">cart id 自增修复 <span class="tag sql">SQL</span></li>
+              <li class="sql">user_address id 自增修复 <span class="tag sql">SQL</span></li>
+              <li class="sql">order_info source_cart_ids <span class="tag sql">SQL</span></li>
+              <li class="sql">order_info version 乐观锁 <span class="tag sql">SQL</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">12</span>
+            <h3>运维部署</h3>
+            <p class="desc">运维部署技术文档：环境依赖、数据库初始化、打包运行、Nginx 反代、排障</p>
+            <ul class="doclist">
+              <li>运维部署技术文档 <span class="tag">核心</span></li>
+              <li class="sql">全量数据库 fresh_mall <span class="tag sql">SQL · 已打码 IP</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="num">13</span>
+            <h3>商用运维管理</h3>
+            <p class="desc">商用运维管理文档：开店配置、订单履约、自动化时效、退款/售后规则、监控与合规</p>
+            <ul class="doclist">
+              <li>商用运维管理文档 <span class="tag">核心</span></li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="must">
+        <h2>三、核心文档速查 <span class="sub">必读，下列为核心文档名（不提供跳转）</span></h2>
+        <div class="must">
+          <article class="card">
+            <h3><span class="star">★</span> 架构总览</h3>
+            <p class="desc">架构设计文档.md</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 数据库设计</h3>
+            <p class="desc">数据库设计文档.md — 状态机、索引策略、sys_config 字段表</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 接口清单</h3>
+            <p class="desc">API 接口清单.md — 84 个接口 + 鉴权标注</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 支付订单全链路</h3>
+            <p class="desc">支付订单完整业务流程技术文档.md — 本项目最权威支付专题，含演示模式 §8</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 建表 SQL 总入口</h3>
+            <p class="desc">fresh_mall 建表 SQL.sql — 全新库执行</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 运维部署</h3>
+            <p class="desc">运维部署技术文档.md — 环境 / 初始化 / 打包 / Nginx / 排障</p>
+          </article>
+          <article class="card">
+            <h3><span class="star">★</span> 商用运维管理</h3>
+            <p class="desc">商用运维管理文档.md — 开店 / 履约 / 时效 / 退款规则</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="decisions">
+        <h2>四、关键设计决策 <span class="sub">已拍板，勿随意改</span></h2>
+        <div class="notes">
+          <div class="panel">
+            <ol>
+              <li><b>模拟支付开关</b> = <code>sys_config.pay_demo_enabled</code> 专用列；开=1 走演示分支，关=0 走真实链路，与 <code>wxpay_enabled</code> 互斥。</li>
+              <li><b>密钥安全</b>：APIv3Key / COS SecretKey 库内 AES 密文，yml 只放 <code>${...:}</code> 占位，不入库文件、不提交 Gitee。</li>
+              <li><b>个人主体约束</b>：微信小程序为个人主体，真实微信支付不可开通；真收款须先办个体户执照升级主体。</li>
+              <li><b>购物车清空时机</b>：在「支付成功」时按 <code>order_info.source_cart_ids</code> 精准清空对应条目（非下单时）。</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <ol start="5">
+              <li><b>订单乐观锁</b>：<code>order_info.version</code> 列防支付回调与后台改单并发丢失更新。</li>
+              <li><b>自动时效（写死常量，保持简单）</b>：待收货 12h 自动确认；已完成 24h 内可申请售后；待发货用户退款商家 &gt;24h 自动同意。</li>
+              <li><b>退款语义边界</b>：「取消订单」= 已支付未发货用户主动退单原路退款；「申请退款/售后」= 待收货/已完成时发起，走不同入口。</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="changes">
+        <h2>五、近期重要变更</h2>
+        <div class="notes">
+          <div class="panel">
+            <ul>
+              <li><b>2026-08-12</b>：完成 01–10 类文档归类与核心设计文档（架构 / 数据库 / 接口清单 / 支付专题）。</li>
+              <li><b>2026-08-13</b>：补充 09 系统配置迁移、08 工程规范；确立密钥安全与演示模式红线。</li>
+              <li><b>2026-08-14 上午</b>：购物车 id 漂移修复、已完成 24h 售后、待收货 12h 自动确认、确认收货按钮、全库 id 自增补齐。</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <ul>
+              <li><b>2026-08-14 下午</b>：新增 11 数据库修复脚本 / 12 运维部署 / 13 商用运维管理 三类文档；全量测试数据 <code>fresh_mall.sql</code> 入 12 目录（已打码服务器 IP）。</li>
+              <li><b>2026-08-14 下午·代码</b>：落地配送中状态+接单、支付成功精准清空购物车、待收货自动确认、待发货一键取消退款、地址省市区民政部数据替换。</li>
+              <li>代码与文档同步提交于 <code>dev</code> 分支；改接口/表字段/配置项须先更文档再改代码。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        生鲜商城小程序 · 开发文档总索引 ｜ 最后更新 2026-08-14
+        <br />
+        本页为 <code>README.md</code> 的可浏览版本；原始 Markdown 仍保留为权威源。
+        <br />
+        <a class="back" href="../index.html">← 返回个人作品集</a>
+      </footer>
+    </div>
+  </body>
+</html>

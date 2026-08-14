@@ -509,6 +509,12 @@ h3 {
   animation-delay: -1.2s;
 }
 
+.phone-c {
+  left: 34%;
+  top: 60px;
+  animation-delay: -2.4s;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1178,6 +1184,11 @@ h3 {
   .phone-b {
     left: 12%;
     top: 0;
+  }
+
+  .phone-c {
+    left: 26%;
+    top: 36px;
   }
 
   .holo-ring {

@@ -91,6 +91,15 @@
                 data-i18n-attr="alt:alt.orderingMini"
               />
             </figure>
+            <figure class="phone-shot phone-c">
+              <img
+                src="assets/images/fresh-mall/fresh-mall-mini-01.webp"
+                width="810"
+                height="1800"
+                alt="生鲜商城小程序首页"
+                data-i18n-attr="alt:alt.freshMiniHome"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -102,7 +111,7 @@
             <span data-i18n="stats.tasks">禅道任务记录</span>
           </div>
           <div class="reveal">
-            <strong>35</strong>
+            <strong>65</strong>
             <span data-i18n="stats.shots">项目截图素材</span>
           </div>
           <div class="reveal">
@@ -110,7 +119,7 @@
             <span data-i18n="stats.docs">项目文档字数</span>
           </div>
           <div class="reveal">
-            <strong>3</strong>
+            <strong>4</strong>
             <span data-i18n="stats.projects">独立交付项目</span>
           </div>
         </div>
@@ -269,6 +278,37 @@
                 <img src="assets/images/work-evidence/work-evidence-05.webp" width="1750" height="921" alt="禅道具体任务截图" loading="lazy" data-i18n-attr="alt:alt.zentaoTask" />
               </div>
             </article>
+
+            <article class="project-case reveal">
+              <div class="project-copy">
+                <span class="project-kicker" data-i18n="p5.kicker">全栈独立开发 | 2026.08</span>
+                <h3 data-i18n="p5.title">生鲜商城小程序系统</h3>
+                <p data-i18n="p5.desc">
+                  面向生鲜零售场景的全栈电商系统，独立搭建「微信小程序 + PC 运营后台 + 后端」三端协同架构，6 天内完成需求到部署文档的全流程，覆盖商品、库存、购物车、订单、支付、退款、用户与运营后台等核心模块，提供约 84 个后端接口，实现从浏览下单到支付退款的完整交易闭环。
+                </p>
+                <ul class="check-list">
+                  <li data-i18n="p5.b1">自研订单状态机（非连续状态值 + 原子判断），保证状态流转幂等，杜绝重复发货与状态错乱。</li>
+                  <li data-i18n="p5.b2">微信支付 V3 全链路对接 + 完整退款体系（仅退款 / 部分退款 / 原路退回），基于 Redisson 分布式锁防并发重复退款。</li>
+                  <li data-i18n="p5.b3">密钥 AES 密文存储、演示开关模拟真实支付链路，沉淀数据库修复、运维部署、商用运维等系列文档。</li>
+                </ul>
+                <div class="tag-row">
+                  <span>Spring Boot 3.3</span>
+                  <span>uni-app</span>
+                  <span>微信支付 V3</span>
+                  <span>MySQL 8.0</span>
+                  <span>Redis / Redisson</span>
+                  <span>Sa-Token</span>
+                </div>
+                <div class="link-row">
+                  <a href="生鲜商城资料/生鲜商城文档索引.html" target="_blank" rel="noreferrer" data-i18n="p5.link">开发文档总索引</a>
+                </div>
+              </div>
+              <div class="case-media three-up">
+                <img src="assets/images/fresh-mall/fresh-mall-admin-01.webp" width="1800" height="900" alt="生鲜商城运营后台首页" loading="lazy" data-i18n-attr="alt:alt.freshDashboard" />
+                <img src="assets/images/fresh-mall/fresh-mall-mini-01.webp" width="810" height="1800" alt="生鲜商城小程序首页" loading="lazy" data-i18n-attr="alt:alt.freshMiniHome" />
+                <img src="assets/images/fresh-mall/fresh-mall-mini-06.webp" width="810" height="1800" alt="生鲜商城商品详情页" loading="lazy" data-i18n-attr="alt:alt.freshProduct" />
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -287,6 +327,7 @@
               <button class="filter-button" type="button" data-filter="forum" data-i18n="filter.forum">论坛小程序</button>
               <button class="filter-button" type="button" data-filter="yunyu-erp" data-i18n="filter.erp">内部 ERP</button>
               <button class="filter-button" type="button" data-filter="work-evidence" data-i18n="filter.work">工作证据</button>
+              <button class="filter-button" type="button" data-filter="fresh-mall" data-i18n="filter.fresh">生鲜商城</button>
             </div>
           </div>
 
