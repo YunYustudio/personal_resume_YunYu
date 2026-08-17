@@ -147,4 +147,43 @@ export const projects: Project[] = [
       { src: "assets/images/fresh-mall/fresh-mall-mini-06.webp", shape: "phone", alt: { zh: "生鲜商城商品详情页", en: "Fresh mall product detail" } },
     ],
   },
+  {
+    id: "vr-hall",
+    layout: "default",
+    media: "dashboard-pair",
+    kicker: { zh: "独立全栈项目 | VR 数字展厅", en: "Independent full-stack project | VR Digital Hall" },
+    title: { zh: "VR 实景展厅 · PhotoSphereViewer 云游", en: "VR Hall · PhotoSphereViewer Tour" },
+    desc: {
+      zh: "面向服装制造企业的 360° 全景实景数字展厅：用 Web 3D 渲染把真实工厂（厂区、车间、展厅等 19 个实景场景）搬进浏览器，支持全景漫游、跨场景导览与 42 个产品热点。纯前端、零后端、零商业 SDK，部署成本趋近于零。",
+      en: "A 360° panoramic digital showroom for apparel manufacturers: real factory scenes (19 live scenes incl. campus, workshops, showroom) brought into the browser via Web 3D, with panoramic touring and 42 product hotspots. Pure front-end, zero backend, zero commercial SDK — near-zero deployment cost.",
+    },
+    bullets: [
+      { zh: "基于 three.js + Photo Sphere Viewer（MIT），原生 ESM + importmap，CDN 与本地副本双通道，免构建、免服务器。", en: "Built on three.js + Photo Sphere Viewer (MIT) with native ESM + importmap, CDN + local vendored copies, no build step and no server." },
+      { zh: "19 个场景节点图漫游 + 42 个产品热点 + 相册 / 自动巡航 / 陀螺仪 / VR 双屏，手机与 PC 多端沉浸式体验。", en: "19-scene node-graph touring, 42 product hotspots, gallery / autorotate / gyroscope / stereo VR, immersive on both mobile and desktop." },
+      { zh: "完整数据工程管线：DrissionPage 自动化采集公网数据 → 资源本地化 → 球面坐标换算 → 前端组装，运行时与源平台解耦。", en: "End-to-end data pipeline: DrissionPage automated scraping of public data → asset localization → spherical-coordinate conversion → front-end assembly, fully decoupled from the source at runtime." },
+    ],
+    tags: [
+      { zh: "Photo Sphere Viewer", en: "Photo Sphere Viewer" },
+      { zh: "three.js", en: "three.js" },
+      { zh: "WebGL", en: "WebGL" },
+      { zh: "JavaScript ESM", en: "JavaScript ESM" },
+      { zh: "Python", en: "Python" },
+      { zh: "DrissionPage", en: "DrissionPage" },
+    ],
+    links: [
+      { label: { zh: "查看技术文档", en: "Technical Doc" }, href: "docs/vr-hall/" },
+      { label: { zh: "Bilibili 演示", en: "Bilibili Demo" }, href: "https://b23.tv/gzVtslJ" },
+    ],
+    images: [],
+    video: {
+      id: "vr-hall-demo",
+      bvid: "BV1Njbv6nECZ",
+      sourceUrl: "https://b23.tv/gzVtslJ",
+      title: { zh: "云游 VR 数字展厅 · 实机演示", en: "YunYu VR Digital Hall · Live Demo" },
+      caption: {
+        zh: "PhotoSphereViewer 全景漫游 · B 站公网演示",
+        en: "PhotoSphereViewer panoramic tour · public Bilibili demo",
+      },
+    },
+  },
 ];

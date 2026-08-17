@@ -23,6 +23,7 @@ export interface Project {
   images: MediaImage[];
   layout: "default" | "reverse";
   media: "three-up" | "phone-strip" | "dashboard-pair";
+  video?: FeaturedVideo;
 }
 
 export interface GalleryItem {
@@ -31,6 +32,16 @@ export interface GalleryItem {
   title: Localized;
   src: string;
   shape?: "phone";
+}
+
+// 第三方公网视频（如 B 站）：不自行托管，直接使用用户提供的公网链接作为播放源。
+export interface FeaturedVideo {
+  id: string;
+  bvid: string; // B 站视频 BV 号，用于官方播放器嵌入（player.bilibili.com）
+  sourceUrl: string; // 用户提供的公网视频链接（作为播放源引用 / “在 B 站打开”）
+  title: Localized;
+  caption?: Localized;
+  autoplay?: boolean;
 }
 
 export interface TimelineEntry {

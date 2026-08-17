@@ -2,6 +2,7 @@
 import { projects } from "../data/projects";
 import { ui } from "../i18n/ui";
 import { withBase } from "../utils";
+import VideoPlayer from "./VideoPlayer.astro";
 
 function linkHref(href: string): string {
   return /^https?:/i.test(href) ? href : withBase(href);
@@ -18,7 +19,7 @@ function linkHref(href: string): string {
 
     <div class="project-stack">
       {projects.map((p) => (
-        <article class={`project-case ${p.layout === "reverse" ? "reverse" : ""} reveal`}>
+        <article class={`project-case ${p.layout === "reverse" ? "reverse" : ""} reveal`} id={p.id}>
           <div class="project-copy">
             <span class="project-kicker" data-zh={p.kicker.zh} data-en={p.kicker.en}>{p.kicker.zh}</span>
             <h3 data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</h3>
@@ -35,7 +36,13 @@ function linkHref(href: string): string {
             </div>
             <div class="link-row">
               {p.links.map((l) => (
-                <a href={linkHref(l.href)} target="_blank" rel="noreferrer" data-zh={l.label.zh} data-en={l.label.en}>{l.label.zh}</a>
+                <a
+                  href={linkHref(l.href)}
+                  target={/^https?:/i.test(l.href) ? "_blank" : undefined}
+                  rel={/^https?:/i.test(l.href) ? "noreferrer" : undefined}
+                  data-zh={l.label.zh}
+                  data-en={l.label.en}
+                >{l.label.zh}</a>
               ))}
             </div>
           </div>
@@ -49,6 +56,7 @@ function linkHref(href: string): string {
                 loading="lazy"
               />
             ))}
+            {p.video && <VideoPlayer video={p.video} />}
           </div>
         </article>
       ))}

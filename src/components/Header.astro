@@ -1,11 +1,12 @@
 ---
 import { withBase } from "../utils";
 import { ui } from "../i18n/ui";
+import { projects } from "../data/projects";
 
 const home = withBase("/"); // 首页地址（带 base 前缀），配合锚点可在任意页面跳转回首页对应区块
 const navItems = [
   { href: home + "#proof", key: "nav.proof" },
-  { href: home + "#projects", key: "nav.projects" },
+  { href: home + "#projects", key: "nav.projects", dropdown: true },
   { href: home + "#gallery", key: "nav.gallery" },
   { href: withBase("resume"), key: "nav.resume" },
   { href: home + "#contact", key: "nav.contact" },
@@ -19,7 +20,23 @@ const navItems = [
   </a>
   <nav class="site-nav" aria-label="主导航" data-i18n-attr="aria-label:nav.aria">
     {navItems.map((item) => (
-      <a href={item.href} data-i18n={item.key}>{ui.zh[item.key]}</a>
+      item.dropdown ? (
+        <div class="nav-has-dropdown">
+          <a href={item.href} class="nav-trigger" aria-haspopup="true">
+            <span class="nav-trigger__label" data-i18n={item.key}>{ui.zh[item.key]}</span>
+            <span class="nav-caret" aria-hidden="true"></span>
+          </a>
+          <ul class="nav-dropdown" role="menu" aria-label={ui.zh[item.key]}>
+            {projects.map((p) => (
+              <li role="none">
+                <a href={home + "#" + p.id} role="menuitem" data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <a href={item.href} data-i18n={item.key}>{ui.zh[item.key]}</a>
+      )
     ))}
   </nav>
   <div class="lang-switch" role="group" aria-label="Language switcher">

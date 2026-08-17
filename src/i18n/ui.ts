@@ -53,6 +53,14 @@ export const ui: Record<Lang, Record<string, string>> = {
     "projects.eyebrow": "Selected Work",
     "projects.title": "项目案例",
     "projects.lead": "每个项目都保留了真实截图，重点展示业务理解、系统范围和交付证据。",
+    // 项目展示区公网视频播放器
+    "video.openSource": "在 B 站打开",
+    "video.playHint": "点击播放演示",
+    "video.aria": "播放 B 站演示视频",
+    // 文档展示页
+    "doc.back": "返回作品集",
+    "doc.toc": "目录",
+    "doc.onThisPage": "本页内容",
     "gallery.eyebrow": "Gallery",
     "gallery.title": "截图画廊",
     "gallery.lead": "按项目筛选，也可以点击任意截图查看大图。",
@@ -142,6 +150,14 @@ export const ui: Record<Lang, Record<string, string>> = {
     "projects.title": "Project Cases",
     "projects.lead":
       "Each project includes real screenshots and focuses on business understanding, system scope, and delivery evidence.",
+    // 项目展示区公网视频播放器
+    "video.openSource": "Open on Bilibili",
+    "video.playHint": "Click to play the demo",
+    "video.aria": "Play the Bilibili demo video",
+    // 文档展示页
+    "doc.back": "Back to Portfolio",
+    "doc.toc": "Contents",
+    "doc.onThisPage": "On this page",
     "gallery.eyebrow": "Gallery",
     "gallery.title": "Screenshot Gallery",
     "gallery.lead": "Filter by project or click any screenshot to inspect it in a larger view.",

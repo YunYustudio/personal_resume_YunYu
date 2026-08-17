@@ -1,0 +1,60 @@
+---
+// 第三方公网视频播放器控件（专门适配 B 站等公网视频资源）
+// 直接使用用户提供的公网视频链接作为播放源，不自行托管视频文件。
+// 实现：主题化外壳 + 点击播放后懒加载 B 站官方播放器 iframe（原生播放/暂停/进度/全屏）。
+import type { FeaturedVideo } from "../data/types";
+import { ui } from "../i18n/ui";
+
+interface Props {
+  video: FeaturedVideo;
+}
+
+const { video } = Astro.props;
+
+// 由 BV 号构造 B 站官方播放器嵌入地址（公网播放源，无需自托管）
+const params = new URLSearchParams({
+  bvid: video.bvid,
+  page: "1",
+  high_quality: "1",
+  danmaku: "0",
+  autoplay: video.autoplay ? "1" : "0",
+  as_wide: "1",
+});
+const embedSrc = `https://player.bilibili.com/player.html?${params.toString()}`;
+
+const titleZh = video.title.zh;
+const titleEn = video.title.en;
+const captionZh = video.caption?.zh ?? "";
+const captionEn = video.caption?.en ?? "";
+---
+
+<article class="video-card reveal" data-video-card>
+  <header class="video-card__bar">
+    <span class="video-card__play" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+    </span>
+    <span class="video-card__titles">
+      <strong class="video-card__title" data-zh={titleZh} data-en={titleEn}>{titleZh}</strong>
+      {video.caption && (
+        <span class="video-card__caption" data-zh={captionZh} data-en={captionEn}>{captionZh}</span>
+      )}
+    </span>
+    <a
+      class="video-card__source"
+      href={video.sourceUrl}
+      target="_blank"
+      rel="noreferrer"
+      data-i18n="video.openSource"
+    >{ui.zh["video.openSource"]}</a>
+  </header>
+
+  <div class="video-card__frame" data-video-frame data-embed={embedSrc}>
+    <button type="button" class="video-poster" data-video-trigger data-i18n-attr={`aria-label:video.aria`} aria-label={ui.zh["video.aria"]}>
+      <span class="video-poster__glow" aria-hidden="true"></span>
+      <span class="video-poster__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+      </span>
+      <span class="video-poster__hint" data-i18n="video.playHint">{ui.zh["video.playHint"]}</span>
+    </button>
+  </div>
+</article>
