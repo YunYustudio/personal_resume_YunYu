@@ -205,6 +205,28 @@ function initSakura(): void {
   tick();
 }
 
+/* ------------------- 锚点导航：同页平滑滚动，跨页交给浏览器 ------------------- */
+// 链接现在都指向"首页地址 + #区块"（如 /personal_resume_YunYu/#proof）。
+// 若目标区块就在当前页，则拦截默认行为做平滑滚动；否则放行，让浏览器跳回首页并定位区块。
+function initSmoothNav(): void {
+  if (reduceMotion) return; // 减弱动效时走浏览器原生（即时/无动画）行为
+  document.addEventListener("click", (event: MouseEvent) => {
+    const link = (event.target as HTMLElement | null)?.closest?.("a");
+    if (!link) return;
+    const href = link.getAttribute("href") || "";
+    if (link.target === "_blank" || /^(mailto:|tel:|https?:)/i.test(href)) return;
+    const hashIndex = href.indexOf("#");
+    if (hashIndex === -1) return;
+    const hash = href.slice(hashIndex + 1);
+    if (!hash) return;
+    const target = document.getElementById(hash);
+    if (!target) return; // 区块不在当前页 → 放行，跳回首页并定位
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", `#${hash}`);
+  });
+}
+
 /* ----------------------------- 滚动入场 ----------------------------- */
 function initReveal(): void {
   const items = document.querySelectorAll<HTMLElement>(".reveal");
@@ -233,6 +255,7 @@ function boot(): void {
   initParticles();
   initSakura();
   initReveal();
+  initSmoothNav();
 }
 
 if (document.readyState === "loading") {

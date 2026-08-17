@@ -2,12 +2,13 @@
 import { withBase } from "../utils";
 import { ui } from "../i18n/ui";
 
+const home = withBase("/"); // 首页地址（带 base 前缀），配合锚点可在任意页面跳转回首页对应区块
 const navItems = [
-  { href: "#proof", key: "nav.proof" },
-  { href: "#projects", key: "nav.projects" },
-  { href: "#gallery", key: "nav.gallery" },
+  { href: home + "#proof", key: "nav.proof" },
+  { href: home + "#projects", key: "nav.projects" },
+  { href: home + "#gallery", key: "nav.gallery" },
   { href: withBase("resume"), key: "nav.resume" },
-  { href: "#contact", key: "nav.contact" },
+  { href: home + "#contact", key: "nav.contact" },
 ];
 ---
 

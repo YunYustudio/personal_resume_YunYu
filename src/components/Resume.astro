@@ -36,7 +36,7 @@ import { withBase } from "../utils";
 
         <div class="resume-card reveal">
           <a class="button primary resume-download" href={withBase("")} data-i18n="resume.backHome">{ui.zh["resume.backHome"]}</a>
-          <a class="button ghost resume-download" href="#contact" data-i18n="resume.contact">{ui.zh["resume.contact"]}</a>
+          <a class="button ghost resume-download" href={withBase("/") + "#contact"} data-i18n="resume.contact">{ui.zh["resume.contact"]}</a>
         </div>
       </aside>
 
