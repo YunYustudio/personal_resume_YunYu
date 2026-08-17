@@ -9,6 +9,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "meta.title": "蕴宇 | 企业应用全栈开发作品集",
     "meta.description":
       "蕴宇的在线作品集：企业应用开发、生产级 ERP 系统、全栈交付、微信小程序与 Corp IT 工作流。",
+    "person.name": "蕴宇",
     "nav.skip": "跳到主要内容",
     "nav.homeAria": "返回首页",
     "nav.aria": "主导航",
@@ -92,6 +93,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "meta.title": "YunYu | Enterprise Application Portfolio",
     "meta.description":
       "YunYu's portfolio: enterprise applications, production ERP systems, full-stack delivery, WeChat mini-programs, and Corp IT workflows.",
+    "person.name": "YunYu",
     "nav.skip": "Skip to main content",
     "nav.homeAria": "Back to home",
     "nav.aria": "Primary navigation",
