@@ -1,0 +1,22 @@
+---
+import { capabilities } from "../data/site";
+import { ui } from "../i18n/ui";
+---
+
+<section class="band" id="proof">
+  <div class="container section-grid">
+    <div class="section-intro reveal">
+      <p class="eyebrow" data-i18n="proof.eyebrow">{ui.zh["proof.eyebrow"]}</p>
+      <h2 data-i18n="proof.title">{ui.zh["proof.title"]}</h2>
+      <p data-i18n="proof.lead">{ui.zh["proof.lead"]}</p>
+    </div>
+    <div class="capability-grid">
+      {capabilities.map((c) => (
+        <article class="capability reveal">
+          <h3 data-i18n={c.titleKey}>{ui.zh[c.titleKey]}</h3>
+          <p data-i18n={c.descKey}>{ui.zh[c.descKey]}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+import type { GalleryItem } from "./types";
+
+// 截图画廊——数据驱动，新增截图只需追加条目（只加不删）
+export const galleryItems: GalleryItem[] = [
+  // ---------------- 点餐系统 ----------------
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "DIY 装修小程序首页", en: "DIY Mini-Program Home" }, src: "assets/images/ordering/ordering-01.webp", shape: "phone" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "RBAC 角色控制", en: "RBAC Role Control" }, src: "assets/images/ordering/ordering-02.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "会员分析", en: "Member Analytics" }, src: "assets/images/ordering/ordering-03.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "会员系统小程序", en: "Membership Mini Program" }, src: "assets/images/ordering/ordering-04.webp", shape: "phone" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "开源文档说明", en: "Open-Source Documentation" }, src: "assets/images/ordering/ordering-05.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "支付对接", en: "Payment Integration" }, src: "assets/images/ordering/ordering-06.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "毛利报表", en: "Gross-Profit Report" }, src: "assets/images/ordering/ordering-07.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "活动营销", en: "Campaign Marketing" }, src: "assets/images/ordering/ordering-08.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "点餐小程序展示", en: "Ordering Mini-Program UI" }, src: "assets/images/ordering/ordering-09.webp", shape: "phone" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "积分与优惠券说明", en: "Points and Coupon Flow" }, src: "assets/images/ordering/ordering-10.webp", shape: "phone" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "积分商城页面", en: "Points Mall Page" }, src: "assets/images/ordering/ordering-11.webp", shape: "phone" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "老板视图", en: "Owner Dashboard" }, src: "assets/images/ordering/ordering-12.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "软件销售功能介绍", en: "Sales Feature Document" }, src: "assets/images/ordering/ordering-13.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "运维维护文档", en: "Operations Guide" }, src: "assets/images/ordering/ordering-14.webp" },
+  { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "系统架构图", en: "System Architecture" }, src: "assets/images/ordering/ordering-15.webp" },
+
+  // ---------------- 工作证据 ----------------
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "完成任务数量", en: "Completed Task Count" }, src: "assets/images/work-evidence/work-evidence-01.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "最高任务量记录", en: "Peak Task Volume" }, src: "assets/images/work-evidence/work-evidence-02.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务列表", en: "ZenTao Task List" }, src: "assets/images/work-evidence/work-evidence-03.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务详情", en: "ZenTao Task Detail" }, src: "assets/images/work-evidence/work-evidence-04.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "精准任务证据", en: "Concrete Task Evidence" }, src: "assets/images/work-evidence/work-evidence-05.webp" },
+
+  // ---------------- 论坛小程序 ----------------
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "服务选择页", en: "Service Selection Page" }, src: "assets/images/forum/forum-01.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "校园服务入口", en: "Campus Service Entry" }, src: "assets/images/forum/forum-02.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "登录页面", en: "Login Page" }, src: "assets/images/forum/forum-03.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "订单/跑腿页面", en: "Order / Errand Page" }, src: "assets/images/forum/forum-04.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "个人中心", en: "Personal Center" }, src: "assets/images/forum/forum-05.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "帖子详情", en: "Post Detail" }, src: "assets/images/forum/forum-06.webp", shape: "phone" },
+  { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "帖子列表", en: "Post List" }, src: "assets/images/forum/forum-07.webp", shape: "phone" },
+
+  // ---------------- 内部 ERP ----------------
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "人事绩效薪资统计", en: "HR Performance and Salary Statistics" }, src: "assets/images/yunyu-erp/yunyu-erp-01.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同展示列表", en: "Contract List" }, src: "assets/images/yunyu-erp/yunyu-erp-02.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同详情展示", en: "Contract Detail" }, src: "assets/images/yunyu-erp/yunyu-erp-03.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "客户管理模块", en: "Customer Management Module" }, src: "assets/images/yunyu-erp/yunyu-erp-04.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "登录页", en: "Login Page" }, src: "assets/images/yunyu-erp/yunyu-erp-05.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "知识库空间", en: "Knowledge-Base Space" }, src: "assets/images/yunyu-erp/yunyu-erp-06.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目关联任务管理", en: "Project-Task Association" }, src: "assets/images/yunyu-erp/yunyu-erp-07.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目管理", en: "Project Management" }, src: "assets/images/yunyu-erp/yunyu-erp-08.webp" },
+
+  // ---------------- 生鲜商城 ----------------
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "运营后台首页", en: "Admin Dashboard" }, src: "assets/images/fresh-mall/fresh-mall-admin-01.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "核心系统配置", en: "Core System Config" }, src: "assets/images/fresh-mall/fresh-mall-admin-02.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "店铺配置", en: "Shop Config" }, src: "assets/images/fresh-mall/fresh-mall-admin-03.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "轮播图配置", en: "Banner Config" }, src: "assets/images/fresh-mall/fresh-mall-admin-04.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "小程序公告管理", en: "Announcement Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-05.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "生鲜分类管理", en: "Category Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-06.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "生鲜商品管理", en: "Product Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-07.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "库存管理", en: "Inventory Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-08.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "订单管理", en: "Order Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-09.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "售后处理", en: "After-sales" }, src: "assets/images/fresh-mall/fresh-mall-admin-10.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "用户管理", en: "User Mgmt" }, src: "assets/images/fresh-mall/fresh-mall-admin-11.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "管理员账号", en: "Admin Accounts" }, src: "assets/images/fresh-mall/fresh-mall-admin-12.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "二维码上传处理", en: "QR Upload" }, src: "assets/images/fresh-mall/fresh-mall-admin-13.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "系统操作日志", en: "Operation Log" }, src: "assets/images/fresh-mall/fresh-mall-admin-14.webp" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "小程序首页", en: "Mini Home" }, src: "assets/images/fresh-mall/fresh-mall-mini-01.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "分类页", en: "Category Tab" }, src: "assets/images/fresh-mall/fresh-mall-mini-02.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "购物车", en: "Cart Tab" }, src: "assets/images/fresh-mall/fresh-mall-mini-03.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "我的", en: "Profile Tab" }, src: "assets/images/fresh-mall/fresh-mall-mini-04.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "搜索", en: "Search" }, src: "assets/images/fresh-mall/fresh-mall-mini-05.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "生鲜商品详情", en: "Product Detail" }, src: "assets/images/fresh-mall/fresh-mall-mini-06.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "提交订单", en: "Submit Order" }, src: "assets/images/fresh-mall/fresh-mall-mini-07.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "支付完成", en: "Payment Done" }, src: "assets/images/fresh-mall/fresh-mall-mini-08.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "订单详情·待发货", en: "Order · Pending Ship" }, src: "assets/images/fresh-mall/fresh-mall-mini-09.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "订单详情·配送中", en: "Order · Shipping" }, src: "assets/images/fresh-mall/fresh-mall-mini-10.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "订单详情·待收货", en: "Order · Pending Receive" }, src: "assets/images/fresh-mall/fresh-mall-mini-11.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "订单详情·已完成", en: "Order · Completed" }, src: "assets/images/fresh-mall/fresh-mall-mini-12.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "平台客服", en: "Customer Service" }, src: "assets/images/fresh-mall/fresh-mall-mini-13.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "粉丝群二维码", en: "Fan Group QR" }, src: "assets/images/fresh-mall/fresh-mall-mini-14.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "编辑资料", en: "Edit Profile" }, src: "assets/images/fresh-mall/fresh-mall-mini-15.webp", shape: "phone" },
+  { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "我的收藏", en: "My Favorites" }, src: "assets/images/fresh-mall/fresh-mall-mini-16.webp", shape: "phone" },
+];
+
+// 画廊筛选分类（与 filter 按钮对应）
+export const galleryFilters = [
+  { id: "all", key: "filter.all" },
+  { id: "ordering", key: "filter.ordering" },
+  { id: "forum", key: "filter.forum" },
+  { id: "yunyu-erp", key: "filter.erp" },
+  { id: "work-evidence", key: "filter.work" },
+  { id: "fresh-mall", key: "filter.fresh" },
+] as const;

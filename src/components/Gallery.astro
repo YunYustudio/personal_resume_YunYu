@@ -1,0 +1,43 @@
+---
+import { galleryItems, galleryFilters } from "../data/gallery";
+import { ui } from "../i18n/ui";
+import { withBase } from "../utils";
+---
+
+<section class="band" id="gallery">
+  <div class="container">
+    <div class="section-heading with-actions reveal">
+      <div>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">{ui.zh["gallery.eyebrow"]}</p>
+        <h2 data-i18n="gallery.title">{ui.zh["gallery.title"]}</h2>
+        <p data-i18n="gallery.lead">{ui.zh["gallery.lead"]}</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="截图筛选" data-i18n-attr="aria-label:gallery.filterAria">
+        {galleryFilters.map((f) => (
+          <button
+            class={`filter-button ${f.id === "all" ? "is-active" : ""}`}
+            type="button"
+            data-filter={f.id}
+            data-i18n={f.key}
+          >{ui.zh[f.key]}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+      {galleryItems.map((item, i) => (
+        <article class="gallery-card reveal" data-gallery-card data-category={item.category}>
+          <button type="button" aria-label={`${ui.zh["gallery.viewLarge"]}${item.title.zh}`}>
+            <span class={`gallery-image-wrap ${item.shape === "phone" ? "phone" : ""}`}>
+              <img src={withBase(item.src)} alt={item.title.zh} loading={i < 4 ? "eager" : "lazy"} />
+            </span>
+            <span class="gallery-caption">
+              <strong data-zh={item.title.zh} data-en={item.title.en}>{item.title.zh}</strong>
+              <span data-zh={item.project.zh} data-en={item.project.en}>{item.project.zh}</span>
+            </span>
+          </button>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

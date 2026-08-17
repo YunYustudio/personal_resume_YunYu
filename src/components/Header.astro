@@ -1,0 +1,28 @@
+---
+import { withBase } from "../utils";
+import { ui } from "../i18n/ui";
+
+const navItems = [
+  { href: "#proof", key: "nav.proof" },
+  { href: "#projects", key: "nav.projects" },
+  { href: "#gallery", key: "nav.gallery" },
+  { href: withBase("resume"), key: "nav.resume" },
+  { href: "#contact", key: "nav.contact" },
+];
+---
+
+<header class="site-header">
+  <a class="brand" href={withBase("")} aria-label="返回首页" data-i18n-attr="aria-label:nav.homeAria">
+    <span class="brand-mark">YY</span>
+    <span data-i18n="person.name">{ui.zh["person.name"]}</span>
+  </a>
+  <nav class="site-nav" aria-label="主导航" data-i18n-attr="aria-label:nav.aria">
+    {navItems.map((item) => (
+      <a href={item.href} data-i18n={item.key}>{ui.zh[item.key]}</a>
+    ))}
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Language switcher">
+    <button class="lang-button is-active" type="button" data-lang="zh" aria-pressed="true">中</button>
+    <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>

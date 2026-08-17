@@ -1,0 +1,57 @@
+---
+import { projects } from "../data/projects";
+import { ui } from "../i18n/ui";
+import { withBase } from "../utils";
+
+function linkHref(href: string): string {
+  return /^https?:/i.test(href) ? href : withBase(href);
+}
+---
+
+<section class="band alt" id="projects">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow" data-i18n="projects.eyebrow">{ui.zh["projects.eyebrow"]}</p>
+      <h2 data-i18n="projects.title">{ui.zh["projects.title"]}</h2>
+      <p data-i18n="projects.lead">{ui.zh["projects.lead"]}</p>
+    </div>
+
+    <div class="project-stack">
+      {projects.map((p) => (
+        <article class={`project-case ${p.layout === "reverse" ? "reverse" : ""} reveal`}>
+          <div class="project-copy">
+            <span class="project-kicker" data-zh={p.kicker.zh} data-en={p.kicker.en}>{p.kicker.zh}</span>
+            <h3 data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</h3>
+            <p data-zh={p.desc.zh} data-en={p.desc.en}>{p.desc.zh}</p>
+            <ul class="check-list">
+              {p.bullets.map((b) => (
+                <li data-zh={b.zh} data-en={b.en}>{b.zh}</li>
+              ))}
+            </ul>
+            <div class="tag-row">
+              {p.tags.map((t) => (
+                <span data-zh={t.zh} data-en={t.en}>{t.zh}</span>
+              ))}
+            </div>
+            <div class="link-row">
+              {p.links.map((l) => (
+                <a href={linkHref(l.href)} target="_blank" rel="noreferrer" data-zh={l.label.zh} data-en={l.label.en}>{l.label.zh}</a>
+              ))}
+            </div>
+          </div>
+          <div class={`case-media ${p.media}`}>
+            {p.images.map((img) => (
+              <img
+                src={withBase(img.src)}
+                data-alt-zh={img.alt.zh}
+                data-alt-en={img.alt.en}
+                alt={img.alt.zh}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

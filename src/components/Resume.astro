@@ -1,0 +1,105 @@
+---
+import { resume } from "../data/resume";
+import { ui } from "../i18n/ui";
+import { withBase } from "../utils";
+---
+
+<section class="band">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow" data-i18n="resume.eyebrow">{ui.zh["resume.eyebrow"]}</p>
+      <h2 data-i18n="resume.title">{ui.zh["resume.title"]}</h2>
+      <p data-i18n="resume.lead">{ui.zh["resume.lead"]}</p>
+    </div>
+
+    <div class="resume-layout">
+      <!-- 侧栏：基本信息 -->
+      <aside class="resume-aside">
+        <div class="resume-card reveal">
+          <div class="resume-avatar">{resume.initials}</div>
+          <div class="resume-name" data-zh={resume.name.zh} data-en={resume.name.en}>{resume.name.zh}</div>
+          <div class="resume-role" data-zh={resume.role.zh} data-en={resume.role.en}>{resume.role.zh}</div>
+          <div class="resume-role" data-zh={resume.location.zh} data-en={resume.location.en} style="color:var(--muted);font-weight:700">{resume.location.zh}</div>
+        </div>
+
+        <div class="resume-card reveal">
+          <h3 data-i18n="resume.basics">{ui.zh["resume.basics"]}</h3>
+          <ul class="resume-meta">
+            {resume.basics.map((b) => (
+              <li>
+                <strong data-zh={b.label.zh} data-en={b.label.en}>{b.label.zh}</strong>
+                <span data-zh={b.value.zh} data-en={b.value.en}>{b.value.zh}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="resume-card reveal">
+          <a class="button primary resume-download" href={withBase("")} data-i18n="resume.backHome">{ui.zh["resume.backHome"]}</a>
+          <a class="button ghost resume-download" href="#contact" data-i18n="resume.contact">{ui.zh["resume.contact"]}</a>
+        </div>
+      </aside>
+
+      <!-- 主栏 -->
+      <div>
+        <div class="resume-section reveal">
+          <h3 data-i18n="resume.skills">{ui.zh["resume.skills"]}</h3>
+          {resume.skills.map((group) => (
+            <div style="margin-bottom:16px">
+              <p style="color:var(--accent-strong);font-weight:900;margin:0 0 8px" data-zh={group.group.zh} data-en={group.group.en}>{group.group.zh}</p>
+              <div class="skill-tags">
+                {group.items.map((it) => (
+                  <span data-zh={it.zh} data-en={it.en}>{it.zh}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="resume-section reveal">
+          <h3 data-i18n="resume.experience">{ui.zh["resume.experience"]}</h3>
+          {resume.experience.map((exp) => (
+            <div class="exp-item">
+              <time data-zh={exp.time.zh} data-en={exp.time.en}>{exp.time.zh}</time>
+              <h4 data-zh={exp.title.zh} data-en={exp.title.en}>{exp.title.zh}</h4>
+              <div class="exp-org" data-zh={exp.org.zh} data-en={exp.org.en}>{exp.org.zh}</div>
+              <ul>
+                {exp.points.map((pt) => (
+                  <li data-zh={pt.zh} data-en={pt.en}>{pt.zh}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="resume-section reveal">
+          <h3 data-i18n="resume.education">{ui.zh["resume.education"]}</h3>
+          {resume.education.map((edu) => (
+            <div class="exp-item">
+              <time data-zh={edu.time.zh} data-en={edu.time.en}>{edu.time.zh}</time>
+              <h4 data-zh={edu.title.zh} data-en={edu.title.en}>{edu.title.zh}</h4>
+              <div class="exp-org" data-zh={edu.org.zh} data-en={edu.org.en}>{edu.org.zh}</div>
+              <ul>
+                {edu.points.map((pt) => (
+                  <li data-zh={pt.zh} data-en={pt.en}>{pt.zh}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div class="resume-section reveal">
+          <h3 data-i18n="resume.projects">{ui.zh["resume.projects"]}</h3>
+          <div class="resume-card" style="box-shadow:none">
+            {resume.projects.map((p) => (
+              <div style="padding:10px 0;border-bottom:1px solid var(--line)">
+                <strong data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</strong>
+                <p style="margin:6px 0 0;color:var(--muted)" data-zh={p.summary.zh} data-en={p.summary.en}>{p.summary.zh}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

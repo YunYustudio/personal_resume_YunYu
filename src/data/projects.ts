@@ -1,0 +1,150 @@
+import type { Project } from "./types";
+
+export const projects: Project[] = [
+  {
+    id: "ordering",
+    layout: "default",
+    media: "three-up",
+    kicker: { zh: "独立开源项目 | 2026.05 - 2026.07", en: "Independent open-source project | May 2026 - Jul 2026" },
+    title: { zh: "B2C 微信小程序点餐系统", en: "B2C WeChat Mini-Program Ordering System" },
+    desc: {
+      zh: "面向个体餐饮商户的前后端分离点餐系统，覆盖小程序点餐、后台管理、订单流转、前台/后厨协同、语音播报、会员、营销、支付、报表和运维文档。",
+      en: "A front-end/back-end separated ordering system for small restaurant operations, covering mini-program ordering, admin management, order workflow, front-kitchen/back-kitchen coordination, voice broadcasting, membership, marketing, payment, reporting, and operations documentation.",
+    },
+    bullets: [
+      { zh: "Spring Boot + Vue3 + RabbitMQ + Redis，支持订单状态流转和业务消息处理。", en: "Built with Spring Boot + Vue3 + RabbitMQ + Redis to support order status transitions and business messaging." },
+      { zh: "沉淀约 10 万字文档，包含部署、功能说明、销售材料和运维维护说明。", en: "Produced around 100,000 Chinese characters of documentation, including deployment, feature notes, sales materials, and operations guides." },
+      { zh: "具备完整商业化模块：RBAC、会员分析、老板视图、毛利报表、积分商城、优惠券和活动营销。", en: "Includes commercial modules such as RBAC, member analytics, owner dashboard, gross-profit reports, points mall, coupons, and marketing campaigns." },
+    ],
+    tags: [
+      { zh: "Spring Boot", en: "Spring Boot" },
+      { zh: "Vue3", en: "Vue3" },
+      { zh: "RabbitMQ", en: "RabbitMQ" },
+      { zh: "Redis", en: "Redis" },
+      { zh: "微信小程序", en: "WeChat Mini Program" },
+    ],
+    links: [
+      { label: { zh: "Gitee 源码", en: "Gitee Source" }, href: "https://gitee.com/yunyustudio/yunyuOrderStoreSystem.git" },
+      { label: { zh: "Bilibili 演示", en: "Bilibili Demo" }, href: "https://www.bilibili.com/video/BV1BiTY6GE5L/" },
+    ],
+    images: [
+      { src: "assets/images/ordering/ordering-09.webp", shape: "phone", alt: { zh: "点餐小程序商品列表页面", en: "Product list page of the ordering mini-program" } },
+      { src: "assets/images/ordering/ordering-03.webp", alt: { zh: "会员分析后台页面", en: "Member analytics admin page" } },
+      { src: "assets/images/ordering/ordering-15.webp", alt: { zh: "面享点餐系统架构图", en: "Architecture diagram of the ordering system" } },
+    ],
+  },
+  {
+    id: "forum",
+    layout: "reverse",
+    media: "phone-strip",
+    kicker: { zh: "商业上线项目 | 2026.05", en: "Commercial launched project | May 2026" },
+    title: { zh: "看雪校园微信小程序论坛系统", en: "Kanxue Campus WeChat Mini-Program Forum" },
+    desc: {
+      zh: "独立完成全栈微信小程序论坛系统，负责需求拆解、数据结构设计、接口开发、前端页面、上线交付和维护。项目已通过“看雪校园”小程序入口上线商用。",
+      en: "Independently delivered a full-stack WeChat Mini-Program forum system, covering requirement breakdown, data structure design, API development, front-end pages, launch delivery, and maintenance. The project has been commercially launched through the Kanxue Campus mini-program entry.",
+    },
+    bullets: [
+      { zh: "小程序端覆盖登录、首页信息流、帖子详情、个人中心和校园服务入口。", en: "The mini-program covers login, home feed, post detail, personal center, and campus service entry points." },
+      { zh: "业务细节因商业属性不公开，作品集保留可展示的端侧页面证据。", en: "Detailed business information is not publicly disclosed due to commercial confidentiality; the portfolio keeps displayable page evidence." },
+      { zh: "交付链路包含从需求到上线后的维护，不停在 Demo 层面。", en: "The delivery chain covers requirement analysis, launch, and post-launch maintenance, not just a demo." },
+    ],
+    tags: [
+      { zh: "微信小程序", en: "WeChat Mini Program" },
+      { zh: "全栈交付", en: "Full-stack Delivery" },
+      { zh: "上线商用", en: "Commercial Launch" },
+      { zh: "需求拆解", en: "Requirement Breakdown" },
+    ],
+    links: [{ label: { zh: "项目介绍", en: "Project Page" }, href: "https://gitee.com/yunyustudio/wechatMiniForum" }],
+    images: [
+      { src: "assets/images/forum/forum-03.webp", shape: "phone", alt: { zh: "看雪校园登录页", en: "Login page of Kanxue Campus" } },
+      { src: "assets/images/forum/forum-07.webp", shape: "phone", alt: { zh: "看雪校园帖子列表", en: "Post list page of Kanxue Campus" } },
+      { src: "assets/images/forum/forum-06.webp", shape: "phone", alt: { zh: "看雪校园帖子详情", en: "Post detail page of Kanxue Campus" } },
+    ],
+  },
+  {
+    id: "yunyu-erp",
+    layout: "default",
+    media: "dashboard-pair",
+    kicker: { zh: "内部 ERP 产品 | 2026.06", en: "Internal ERP product | Jun 2026" },
+    title: { zh: "蕴宇软件公司 ERP 管理系统", en: "YunYu Software Company ERP Management System" },
+    desc: {
+      zh: "面向小型软件团队与独立工作室设计的内部管理系统，目标是把获客、客户、合同、销售、项目、任务、绩效、知识库和收支管理流程系统化。",
+      en: "An internal management system for small software teams and independent studios, designed to systematize customer acquisition, customers, contracts, sales, projects, tasks, performance, knowledge base, and income/expense workflows.",
+    },
+    bullets: [
+      { zh: "模块覆盖公司、员工、绩效、客户、服务商、财务、销售、项目、任务和知识库。", en: "Modules cover company, employees, performance, customers, service providers, finance, sales, projects, tasks, and knowledge base." },
+      { zh: "后台页面包含登录、客户管理、合同展示、项目管理、任务关联和知识库空间。", en: "Admin pages include login, customer management, contract display, project management, task association, and knowledge-base space." },
+      { zh: "用流程化系统减少手工管理成本，提高小团队经营效率。", en: "The workflow-oriented design reduces manual management overhead and improves small-team operation efficiency." },
+    ],
+    tags: [
+      { zh: "ERP", en: "ERP" },
+      { zh: "管理后台", en: "Admin System" },
+      { zh: "项目管理", en: "Project Management" },
+      { zh: "知识库", en: "Knowledge Base" },
+      { zh: "合同管理", en: "Contract Management" },
+    ],
+    links: [{ label: { zh: "开放文档", en: "Documentation" }, href: "https://gitee.com/yunyustudio/ITErpSystem.git" }],
+    images: [
+      { src: "assets/images/yunyu-erp/yunyu-erp-05.webp", alt: { zh: "蕴宇 ERP 登录页", en: "Login page of YunYu ERP" } },
+      { src: "assets/images/yunyu-erp/yunyu-erp-08.webp", alt: { zh: "蕴宇 ERP 项目管理页面", en: "Project management page of YunYu ERP" } },
+    ],
+  },
+  {
+    id: "work-evidence",
+    layout: "reverse",
+    media: "dashboard-pair",
+    kicker: { zh: "企业 ERP 二次开发 | 2025.06 - 2026.04", en: "Enterprise ERP secondary development | Jun 2025 - Apr 2026" },
+    title: { zh: "商业管理 ERP 与生产任务证据", en: "Commercial ERP and Production Task Evidence" },
+    desc: {
+      zh: "在深圳软件公司参与百万级商业管理 ERP 系统二次开发与维护，负责客户、合同、销售、账单、财务报表、审批和多个小程序业务模块。",
+      en: "Participated in the secondary development and maintenance of a large commercial ERP platform in a Shenzhen software company, working on customer, contract, sales, billing, finance-related reports, approvals, and mini-program business modules.",
+    },
+    bullets: [
+      { zh: "从零补齐商户/企业入驻、合同签署、销售数据联动、财务账单打通等业务链路。", en: "Built and improved merchant/company onboarding, contract signing, sales-data linkage, and finance billing workflows." },
+      { zh: "处理合同续签、付款日期边界、账单生成、收据打印、水电报表、审批通知等生产级问题。", en: "Handled production issues involving contract renewal, payment-date boundaries, billing generation, receipt printing, utility reports, and approval notifications." },
+      { zh: "禅道累计完成任务 237 条，截图保留了任务数量、任务列表和具体问题记录。", en: "Completed 237 ZenTao tasks, with screenshot evidence of task counts, lists, and concrete issue records." },
+    ],
+    tags: [
+      { zh: "PHP / Hyperf", en: "PHP / Hyperf" },
+      { zh: "MySQL", en: "MySQL" },
+      { zh: "RabbitMQ", en: "RabbitMQ" },
+      { zh: "Nacos", en: "Nacos" },
+      { zh: "Docker", en: "Docker" },
+    ],
+    links: [],
+    images: [
+      { src: "assets/images/work-evidence/work-evidence-01.webp", alt: { zh: "禅道完成任务数量统计", en: "ZenTao completed task count statistics" } },
+      { src: "assets/images/work-evidence/work-evidence-05.webp", alt: { zh: "禅道具体任务截图", en: "Specific ZenTao task screenshot" } },
+    ],
+  },
+  {
+    id: "fresh-mall",
+    layout: "default",
+    media: "three-up",
+    kicker: { zh: "全栈独立开发 | 2026.08", en: "Full-stack independent development | Aug 2026" },
+    title: { zh: "生鲜商城小程序系统", en: "Fresh Mall Mini-Program System" },
+    desc: {
+      zh: "面向生鲜零售场景的全栈电商系统，独立搭建「微信小程序 + PC 运营后台 + 后端」三端协同架构，6 天内完成需求到部署文档的全流程，覆盖商品、库存、购物车、订单、支付、退款、用户与运营后台等核心模块，提供约 84 个后端接口，实现从浏览下单到支付退款的完整交易闭环。",
+      en: "A full-stack e-commerce system for the fresh-produce retail scenario, with an independently built three-tier architecture of WeChat mini-program + PC ops admin + backend. Completed the full flow from requirements to deployment docs in 6 days, covering goods, inventory, cart, orders, payment, refunds, users, and the ops backend, exposing about 84 backend APIs and delivering a complete transaction loop from browsing to paid refunds.",
+    },
+    bullets: [
+      { zh: "自研订单状态机（非连续状态值 + 原子判断），保证状态流转幂等，杜绝重复发货与状态错乱。", en: "Self-built order state machine (non-sequential status values + atomic checks) guarantees idempotent transitions and prevents duplicate shipping or status corruption." },
+      { zh: "微信支付 V3 全链路对接 + 完整退款体系（仅退款 / 部分退款 / 原路退回），基于 Redisson 分布式锁防并发重复退款。", en: "Full WeChat Pay V3 integration plus a complete refund system (refund-only / partial / original-route), with Redisson distributed locks preventing concurrent duplicate refunds." },
+      { zh: "密钥 AES 密文存储、演示开关模拟真实支付链路，沉淀数据库修复、运维部署、商用运维等系列文档。", en: "AES-encrypted secrets and a demo switch simulating the real payment flow, with a series of docs on DB repair, ops deployment, and commercial operations." },
+    ],
+    tags: [
+      { zh: "Spring Boot 3.3", en: "Spring Boot 3.3" },
+      { zh: "uni-app", en: "uni-app" },
+      { zh: "微信支付 V3", en: "WeChat Pay V3" },
+      { zh: "MySQL 8.0", en: "MySQL 8.0" },
+      { zh: "Redis / Redisson", en: "Redis / Redisson" },
+      { zh: "Sa-Token", en: "Sa-Token" },
+    ],
+    links: [{ label: { zh: "开发文档总索引", en: "Dev Docs Index" }, href: "生鲜商城资料/生鲜商城文档索引.html" }],
+    images: [
+      { src: "assets/images/fresh-mall/fresh-mall-admin-01.webp", alt: { zh: "生鲜商城运营后台首页", en: "Fresh mall admin dashboard home" } },
+      { src: "assets/images/fresh-mall/fresh-mall-mini-01.webp", shape: "phone", alt: { zh: "生鲜商城小程序首页", en: "Fresh mall mini-program home" } },
+      { src: "assets/images/fresh-mall/fresh-mall-mini-06.webp", shape: "phone", alt: { zh: "生鲜商城商品详情页", en: "Fresh mall product detail" } },
+    ],
+  },
+];

@@ -1,0 +1,15 @@
+---
+import { stats } from "../data/site";
+import { ui } from "../i18n/ui";
+---
+
+<section class="stats band compact" aria-label="核心数据" data-i18n-attr="aria-label:stats.aria">
+  <div class="container stats-grid">
+    {stats.map((s) => (
+      <div class="reveal">
+        <strong>{s.value}</strong>
+        <span data-i18n={s.labelKey}>{ui.zh[s.labelKey]}</span>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,6 +1,12 @@
 # WorkBuddy 本地项目数据（记忆/元数据，不入库）
 .workbuddy/
 
+# 依赖与构建产物
+node_modules/
+dist/
+.astro/
+.npmcache/
+
 # OS 垃圾文件
 .DS_Store
 Thumbs.db

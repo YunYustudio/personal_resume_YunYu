@@ -1,0 +1,23 @@
+---
+import { timeline } from "../data/site";
+import { ui } from "../i18n/ui";
+---
+
+<section class="band alt">
+  <div class="container resume-grid">
+    <div class="section-intro reveal">
+      <p class="eyebrow" data-i18n="timeline.eyebrow">{ui.zh["timeline.eyebrow"]}</p>
+      <h2 data-i18n="timeline.title">{ui.zh["timeline.title"]}</h2>
+      <p data-i18n="timeline.lead">{ui.zh["timeline.lead"]}</p>
+    </div>
+    <ol class="timeline">
+      {timeline.map((t) => (
+        <li class="reveal">
+          <time data-zh={t.time.zh} data-en={t.time.en}>{t.time.zh}</time>
+          <strong data-zh={t.title.zh} data-en={t.title.en}>{t.title.zh}</strong>
+          <span data-zh={t.desc.zh} data-en={t.desc.en}>{t.desc.zh}</span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

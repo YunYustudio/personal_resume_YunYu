@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { withBase } from "../utils";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "蕴宇 | 企业应用全栈开发作品集", description = "蕴宇的在线作品集：企业应用开发、生产级 ERP 系统、全栈交付、微信小程序与 Corp IT 工作流。" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preload" as="image" href={withBase("assets/images/ordering/ordering-12.webp")} />
+  </head>
+  <body>
+    <div class="background-photo" aria-hidden="true" style={`--bg-photo: url('${withBase("assets/background.jpg")}')`}></div>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <canvas id="sakuraCanvas" aria-hidden="true"></canvas>
+    <div class="scan-grid" aria-hidden="true"></div>
+    <div class="light-sweep" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main" data-i18n="nav.skip">跳到主要内容</a>
+
+    <Header />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="modal-close" type="button" data-close-modal aria-label="关闭大图" data-i18n-attr="aria-label:modal.closeAria">×</button>
+        <img id="modalImage" src="" alt="" />
+        <div class="modal-caption">
+          <strong id="modalTitle"></strong>
+          <span id="modalMeta"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      import "../scripts/background.ts";
+      import "../scripts/i18n-client.ts";
+      import "../scripts/gallery.ts";
+    </script>
+  </body>
+</html>

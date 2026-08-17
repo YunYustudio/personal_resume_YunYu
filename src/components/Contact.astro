@@ -1,0 +1,20 @@
+---
+import { contact } from "../data/site";
+import { ui } from "../i18n/ui";
+---
+
+<section class="band" id="contact">
+  <div class="container contact-panel reveal">
+    <div>
+      <p class="eyebrow" data-i18n="contact.eyebrow">{ui.zh["contact.eyebrow"]}</p>
+      <h2 data-i18n="contact.title">{ui.zh["contact.title"]}</h2>
+      <p data-i18n="contact.lead">{ui.zh["contact.lead"]}</p>
+    </div>
+    <div class="contact-actions">
+      {contact.emails.map((e) => (
+        <a class="button primary" href={e.href}>{e.label}</a>
+      ))}
+      <a class="button ghost" href={contact.gitee.href} target="_blank" rel="noreferrer">{contact.gitee.label}</a>
+    </div>
+  </div>
+</section>
