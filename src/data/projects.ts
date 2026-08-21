@@ -180,6 +180,8 @@ export const projects: Project[] = [
     ],
     links: [
       { label: { zh: "CSDN 技术博客", en: "CSDN Tech Blog" }, href: "https://blog.csdn.net/2601_96484086/article/details/163926218" },
+      { label: { zh: "GitHub 源码", en: "GitHub Source" }, href: "https://github.com/YunYustudio/YunYuFresh_mall" },
+      { label: { zh: "Gitee 源码", en: "Gitee Source" }, href: "https://gitee.com/yunyustudio/YunYuFresh_mall" },
       { label: { zh: "开发文档总索引", en: "Dev Docs Index" }, href: "生鲜商城资料/生鲜商城文档索引.html" },
     ],
     images: [
