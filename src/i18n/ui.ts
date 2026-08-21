@@ -72,6 +72,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.erp": "内部 ERP",
     "filter.work": "工作证据",
     "filter.fresh": "生鲜商城",
+    "filter.jx": "高校论坛",
     "timeline.eyebrow": "Timeline",
     "timeline.title": "经历脉络",
     "timeline.lead":
@@ -169,6 +170,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.erp": "Internal ERP",
     "filter.work": "Work Evidence",
     "filter.fresh": "Fresh Mall",
+    "filter.jx": "Campus Forum",
     "timeline.eyebrow": "Timeline",
     "timeline.title": "Career Timeline",
     "timeline.lead":

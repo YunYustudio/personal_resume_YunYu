@@ -639,6 +639,12 @@ h3 {
   animation-delay: -2.4s;
 }
 
+.phone-d {
+  left: 51%;
+  top: 20px;
+  animation-delay: -3.6s;
+}
+
 /* ----------------------------- 数据条 / 能力 ----------------------------- */
 .stats-grid {
   display: grid;
@@ -759,12 +765,28 @@ h3 {
   order: 2;
 }
 
-.project-kicker {
-  display: block;
+.project-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 10px;
+}
+
+.project-kicker {
   color: var(--gold);
   font-size: 14px;
   font-weight: 900;
+}
+
+.project-badge {
+  padding: 1px 8px;
+  background: rgba(229, 62, 62, 0.12);
+  color: #e53e3e;
+  border: 1px solid rgba(229, 62, 62, 0.35);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .project-copy p {
@@ -847,7 +869,7 @@ h3 {
 }
 
 .phone-strip {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 }
 
 .phone-strip img {
@@ -1652,6 +1674,11 @@ h3 {
   .phone-c {
     left: 26%;
     top: 36px;
+  }
+
+  .phone-d {
+    left: 39%;
+    top: 18px;
   }
 
   .holo-ring {

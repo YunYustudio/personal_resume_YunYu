@@ -19,13 +19,6 @@ export const galleryItems: GalleryItem[] = [
   { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "运维维护文档", en: "Operations Guide" }, src: "assets/images/ordering/ordering-14.webp" },
   { category: "ordering", project: { zh: "B2C 点餐系统", en: "B2C Ordering System" }, title: { zh: "系统架构图", en: "System Architecture" }, src: "assets/images/ordering/ordering-15.webp" },
 
-  // ---------------- 工作证据 ----------------
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "完成任务数量", en: "Completed Task Count" }, src: "assets/images/work-evidence/work-evidence-01.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "最高任务量记录", en: "Peak Task Volume" }, src: "assets/images/work-evidence/work-evidence-02.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务列表", en: "ZenTao Task List" }, src: "assets/images/work-evidence/work-evidence-03.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务详情", en: "ZenTao Task Detail" }, src: "assets/images/work-evidence/work-evidence-04.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "精准任务证据", en: "Concrete Task Evidence" }, src: "assets/images/work-evidence/work-evidence-05.webp" },
-
   // ---------------- 论坛小程序 ----------------
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "服务选择页", en: "Service Selection Page" }, src: "assets/images/forum/forum-01.webp", shape: "phone" },
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "校园服务入口", en: "Campus Service Entry" }, src: "assets/images/forum/forum-02.webp", shape: "phone" },
@@ -76,6 +69,38 @@ export const galleryItems: GalleryItem[] = [
   { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "粉丝群二维码", en: "Fan Group QR" }, src: "assets/images/fresh-mall/fresh-mall-mini-14.webp", shape: "phone" },
   { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "编辑资料", en: "Edit Profile" }, src: "assets/images/fresh-mall/fresh-mall-mini-15.webp", shape: "phone" },
   { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "我的收藏", en: "My Favorites" }, src: "assets/images/fresh-mall/fresh-mall-mini-16.webp", shape: "phone" },
+
+  // ---------------- JX 高校论坛 ----------------
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "帖子管理", en: "Post Management" }, src: "assets/images/jx-forum/jx-forum-admin-01.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "系统配置", en: "System Config" }, src: "assets/images/jx-forum/jx-forum-admin-02.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "举报管理", en: "Report Management" }, src: "assets/images/jx-forum/jx-forum-admin-03.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "二维码管理", en: "QR Code Management" }, src: "assets/images/jx-forum/jx-forum-admin-04.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "板块管理", en: "Board Management" }, src: "assets/images/jx-forum/jx-forum-admin-05.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "用户管理", en: "User Management" }, src: "assets/images/jx-forum/jx-forum-admin-06.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "评论管理", en: "Comment Management" }, src: "assets/images/jx-forum/jx-forum-admin-07.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "轮播图管理", en: "Banner Management" }, src: "assets/images/jx-forum/jx-forum-admin-08.webp" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "小程序首页", en: "Mini Home" }, src: "assets/images/jx-forum/jx-forum-mini-01.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "帖子详情", en: "Post Detail" }, src: "assets/images/jx-forum/jx-forum-mini-02.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿页", en: "Errand Page" }, src: "assets/images/jx-forum/jx-forum-mini-03.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "消息页", en: "Messages" }, src: "assets/images/jx-forum/jx-forum-mini-04.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "我的页", en: "Profile" }, src: "assets/images/jx-forum/jx-forum-mini-05.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "个人中心", en: "Personal Center" }, src: "assets/images/jx-forum/jx-forum-mini-06.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "切换校区", en: "Switch Campus" }, src: "assets/images/jx-forum/jx-forum-mini-07.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "发布帖子", en: "Create Post" }, src: "assets/images/jx-forum/jx-forum-mini-08.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "发布跑腿订单", en: "Publish Errand Order" }, src: "assets/images/jx-forum/jx-forum-mini-09.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "我的收藏", en: "My Favorites" }, src: "assets/images/jx-forum/jx-forum-mini-10.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "校园认证", en: "Campus Verification" }, src: "assets/images/jx-forum/jx-forum-mini-11.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "编辑资料", en: "Edit Profile" }, src: "assets/images/jx-forum/jx-forum-mini-12.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "论坛规范", en: "Forum Rules" }, src: "assets/images/jx-forum/jx-forum-mini-13.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿认证入口", en: "Errand Verification Entry" }, src: "assets/images/jx-forum/jx-forum-mini-14.webp", shape: "phone" },
+  { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿认证协议", en: "Errand Verification Agreement" }, src: "assets/images/jx-forum/jx-forum-mini-15.webp", shape: "phone" },
+
+  // ---------------- 工作证据 ----------------
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "完成任务数量", en: "Completed Task Count" }, src: "assets/images/work-evidence/work-evidence-01.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "最高任务量记录", en: "Peak Task Volume" }, src: "assets/images/work-evidence/work-evidence-02.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务列表", en: "ZenTao Task List" }, src: "assets/images/work-evidence/work-evidence-03.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务详情", en: "ZenTao Task Detail" }, src: "assets/images/work-evidence/work-evidence-04.webp" },
+  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "精准任务证据", en: "Concrete Task Evidence" }, src: "assets/images/work-evidence/work-evidence-05.webp" },
 ];
 
 // 画廊筛选分类（与 filter 按钮对应）
@@ -84,6 +109,7 @@ export const galleryFilters = [
   { id: "ordering", key: "filter.ordering" },
   { id: "forum", key: "filter.forum" },
   { id: "yunyu-erp", key: "filter.erp" },
-  { id: "work-evidence", key: "filter.work" },
   { id: "fresh-mall", key: "filter.fresh" },
+  { id: "jx-forum", key: "filter.jx" },
+  { id: "work-evidence", key: "filter.work" },
 ] as const;

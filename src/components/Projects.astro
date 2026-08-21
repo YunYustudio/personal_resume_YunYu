@@ -21,7 +21,12 @@ function linkHref(href: string): string {
       {projects.map((p) => (
         <article class={`project-case ${p.layout === "reverse" ? "reverse" : ""} reveal`} id={p.id}>
           <div class="project-copy">
-            <span class="project-kicker" data-zh={p.kicker.zh} data-en={p.kicker.en}>{p.kicker.zh}</span>
+            <div class="project-kicker-row">
+              <span class="project-kicker" data-zh={p.kicker.zh} data-en={p.kicker.en}>{p.kicker.zh}</span>
+              {p.badge && (
+                <span class="project-badge" data-zh={p.badge.zh} data-en={p.badge.en}>{p.badge.zh}</span>
+              )}
+            </div>
             <h3 data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</h3>
             <p data-zh={p.desc.zh} data-en={p.desc.en}>{p.desc.zh}</p>
             <ul class="check-list">

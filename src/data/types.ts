@@ -15,6 +15,7 @@ export interface MediaImage {
 export interface Project {
   id: string;
   kicker: Localized;
+  badge?: Localized;
   title: Localized;
   desc: Localized;
   bullets: Localized[];

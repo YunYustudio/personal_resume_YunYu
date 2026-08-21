@@ -47,8 +47,7 @@ export const timeline: TimelineEntry[] = [
 // 联系信息
 export const contact = {
   emails: [
-    { label: "qq523341786@gmail.com", href: "mailto:qq523341786@gmail.com" },
-    { label: "523341786@qq.com", href: "mailto:523341786@qq.com" },
+    { label: "tearhacker@outlook.com", href: "mailto:tearhacker@outlook.com" },
   ],
   gitee: { label: "gitee.com/yunyustudio", href: "https://gitee.com/yunyustudio" },
 };

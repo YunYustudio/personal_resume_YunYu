@@ -2,10 +2,75 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "work-evidence",
+    layout: "reverse",
+    media: "dashboard-pair",
+    kicker: { zh: "前公司项目 · 非自研（二次开发）| 2025.06 - 2026.04", en: "Previous employer · Non-original (secondary dev) | Jun 2025 - Apr 2026" },
+    title: { zh: "商业管理 ERP 与生产任务证据", en: "Commercial ERP and Production Task Evidence" },
+    desc: {
+      zh: "【非自研项目】在在职期间参与前公司百万级商业管理 ERP 系统的二次开发与维护，负责客户、合同、销售、账单、财务报表、审批和多个小程序业务模块。此处展示真实工作产出证据，非个人独立开发作品。",
+      en: "[Non-original project] Secondary development and maintenance on a previous employer's large commercial ERP platform, working on customer, contract, sales, billing, finance-related reports, approvals, and mini-program business modules. Shown here as real work-output evidence, not an independently built project.",
+    },
+    bullets: [
+      { zh: "从零补齐商户/企业入驻、合同签署、销售数据联动、财务账单打通等业务链路。", en: "Built and improved merchant/company onboarding, contract signing, sales-data linkage, and finance billing workflows." },
+      { zh: "处理合同续签、付款日期边界、账单生成、收据打印、水电报表、审批通知等生产级问题。", en: "Handled production issues involving contract renewal, payment-date boundaries, billing generation, receipt printing, utility reports, and approval notifications." },
+      { zh: "禅道累计完成任务 237 条，截图保留了任务数量、任务列表和具体问题记录。", en: "Completed 237 ZenTao tasks, with screenshot evidence of task counts, lists, and concrete issue records." },
+    ],
+    tags: [
+      { zh: "PHP / Hyperf", en: "PHP / Hyperf" },
+      { zh: "MySQL", en: "MySQL" },
+      { zh: "RabbitMQ", en: "RabbitMQ" },
+      { zh: "Nacos", en: "Nacos" },
+      { zh: "Docker", en: "Docker" },
+    ],
+    links: [],
+    images: [
+      { src: "assets/images/work-evidence/work-evidence-01.webp", alt: { zh: "禅道完成任务数量统计", en: "ZenTao completed task count statistics" } },
+      { src: "assets/images/work-evidence/work-evidence-05.webp", alt: { zh: "禅道具体任务截图", en: "Specific ZenTao task screenshot" } },
+    ],
+  },
+  {
+    id: "jx-forum",
+    layout: "default",
+    media: "phone-strip",
+    kicker: { zh: "独立全栈开源项目 | 2026.08", en: "Independent full-stack open-source project | Aug 2026" },
+    badge: { zh: "开源", en: "Open Source" },
+    title: { zh: "JX 蕴宇高校论坛 + 校园跑腿", en: "JX YunYu Campus Forum + Errand" },
+    desc: {
+      zh: "面向高校场景的 UGC 社区 + 校园跑腿（C2C 撮合）全栈小程序，独立完成需求、架构、三端开发、部署与文档全流程。网关 + 双业务三进程轻量微服务，单台 4 核 4GB 服务器部署，完整接入微信支付 V3 真实资金链路（支付 / 退款 / 商家转账）。",
+      en: "A campus-focused UGC community + errand (C2C matching) full-stack mini-program, independently delivered from requirements through architecture, three-tier development, deployment, and documentation. Three-process lightweight microservices on a single 4-core 4GB server, with full WeChat Pay V3 real fund-chain integration (payment / refund / merchant transfer).",
+    },
+    bullets: [
+      { zh: "自研支付中心：支付单/退款/转账三表状态机 + 回调验签（RSA-SHA256 + AES-256-GCM）+ 幂等三重防护 + 5 分钟定时对账兜底。", en: "Self-built payment center: three-table state machine (payment/refund/transfer) + callback signature verification (RSA-SHA256 + AES-256-GCM) + triple idempotency + 5-min reconciliation." },
+      { zh: "校园跑腿 C2C 撮合：6 态订单状态机 + Redis 分布式锁 + DB 条件更新双保险防并发抢单与重复转账。", en: "Campus errand C2C matching: 6-state order state machine + Redis distributed lock + DB conditional update dual insurance against concurrent grab and duplicate transfer." },
+      { zh: "不引入 Nacos/Docker/MQ 的轻量架构取舍：静态路由 + 裸 jar + systemd + Redis + 定时任务，单机可部署、客户运维得起。", en: "Lightweight architecture trade-off without Nacos/Docker/MQ: static routing + bare jar + systemd + Redis + scheduled tasks, single-machine deployable and operator-friendly." },
+    ],
+    tags: [
+      { zh: "Spring Boot 3.5", en: "Spring Boot 3.5" },
+      { zh: "Spring Cloud Gateway", en: "Spring Cloud Gateway" },
+      { zh: "微信支付 V3", en: "WeChat Pay V3" },
+      { zh: "uni-app", en: "uni-app" },
+      { zh: "MySQL 8.4", en: "MySQL 8.4" },
+      { zh: "Redis 7", en: "Redis 7" },
+    ],
+    links: [
+      { label: { zh: "CSDN 技术博客", en: "CSDN Tech Blog" }, href: "https://blog.csdn.net/2601_96484086/article/details/163954433" },
+      { label: { zh: "GitHub 源码", en: "GitHub Source" }, href: "https://github.com/YunYustudio/YunYuJXForumUniversity" },
+      { label: { zh: "Gitee 源码", en: "Gitee Source" }, href: "https://gitee.com/yunyustudio/YunYuJXForumUniversity" },
+    ],
+    images: [
+      { src: "assets/images/jx-forum/jx-forum-mini-01.webp", shape: "phone", alt: { zh: "JX 论坛小程序首页", en: "JX forum mini-program home" } },
+      { src: "assets/images/jx-forum/jx-forum-mini-03.webp", shape: "phone", alt: { zh: "JX 论坛跑腿页", en: "JX forum errand page" } },
+      { src: "assets/images/jx-forum/jx-forum-mini-04.webp", shape: "phone", alt: { zh: "JX 论坛消息页", en: "JX forum message page" } },
+      { src: "assets/images/jx-forum/jx-forum-mini-05.webp", shape: "phone", alt: { zh: "JX 论坛我的页", en: "JX forum profile page" } },
+    ],
+  },
+  {
     id: "ordering",
     layout: "default",
     media: "three-up",
     kicker: { zh: "独立开源项目 | 2026.05 - 2026.07", en: "Independent open-source project | May 2026 - Jul 2026" },
+    badge: { zh: "开源", en: "Open Source" },
     title: { zh: "B2C 微信小程序点餐系统", en: "B2C WeChat Mini-Program Ordering System" },
     desc: {
       zh: "面向个体餐饮商户的前后端分离点餐系统，覆盖小程序点餐、后台管理、订单流转、前台/后厨协同、语音播报、会员、营销、支付、报表和运维文档。",
@@ -90,38 +155,11 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "work-evidence",
-    layout: "reverse",
-    media: "dashboard-pair",
-    kicker: { zh: "企业 ERP 二次开发 | 2025.06 - 2026.04", en: "Enterprise ERP secondary development | Jun 2025 - Apr 2026" },
-    title: { zh: "商业管理 ERP 与生产任务证据", en: "Commercial ERP and Production Task Evidence" },
-    desc: {
-      zh: "在深圳软件公司参与百万级商业管理 ERP 系统二次开发与维护，负责客户、合同、销售、账单、财务报表、审批和多个小程序业务模块。",
-      en: "Participated in the secondary development and maintenance of a large commercial ERP platform in a Shenzhen software company, working on customer, contract, sales, billing, finance-related reports, approvals, and mini-program business modules.",
-    },
-    bullets: [
-      { zh: "从零补齐商户/企业入驻、合同签署、销售数据联动、财务账单打通等业务链路。", en: "Built and improved merchant/company onboarding, contract signing, sales-data linkage, and finance billing workflows." },
-      { zh: "处理合同续签、付款日期边界、账单生成、收据打印、水电报表、审批通知等生产级问题。", en: "Handled production issues involving contract renewal, payment-date boundaries, billing generation, receipt printing, utility reports, and approval notifications." },
-      { zh: "禅道累计完成任务 237 条，截图保留了任务数量、任务列表和具体问题记录。", en: "Completed 237 ZenTao tasks, with screenshot evidence of task counts, lists, and concrete issue records." },
-    ],
-    tags: [
-      { zh: "PHP / Hyperf", en: "PHP / Hyperf" },
-      { zh: "MySQL", en: "MySQL" },
-      { zh: "RabbitMQ", en: "RabbitMQ" },
-      { zh: "Nacos", en: "Nacos" },
-      { zh: "Docker", en: "Docker" },
-    ],
-    links: [],
-    images: [
-      { src: "assets/images/work-evidence/work-evidence-01.webp", alt: { zh: "禅道完成任务数量统计", en: "ZenTao completed task count statistics" } },
-      { src: "assets/images/work-evidence/work-evidence-05.webp", alt: { zh: "禅道具体任务截图", en: "Specific ZenTao task screenshot" } },
-    ],
-  },
-  {
     id: "fresh-mall",
     layout: "default",
     media: "three-up",
     kicker: { zh: "全栈独立开发 | 2026.08", en: "Full-stack independent development | Aug 2026" },
+    badge: { zh: "开源", en: "Open Source" },
     title: { zh: "生鲜商城小程序系统", en: "Fresh Mall Mini-Program System" },
     desc: {
       zh: "面向生鲜零售场景的全栈电商系统，独立搭建「微信小程序 + PC 运营后台 + 后端」三端协同架构，6 天内完成需求到部署文档的全流程，覆盖商品、库存、购物车、订单、支付、退款、用户与运营后台等核心模块，提供约 84 个后端接口，实现从浏览下单到支付退款的完整交易闭环。",
@@ -140,7 +178,10 @@ export const projects: Project[] = [
       { zh: "Redis / Redisson", en: "Redis / Redisson" },
       { zh: "Sa-Token", en: "Sa-Token" },
     ],
-    links: [{ label: { zh: "开发文档总索引", en: "Dev Docs Index" }, href: "生鲜商城资料/生鲜商城文档索引.html" }],
+    links: [
+      { label: { zh: "CSDN 技术博客", en: "CSDN Tech Blog" }, href: "https://blog.csdn.net/2601_96484086/article/details/163926218" },
+      { label: { zh: "开发文档总索引", en: "Dev Docs Index" }, href: "生鲜商城资料/生鲜商城文档索引.html" },
+    ],
     images: [
       { src: "assets/images/fresh-mall/fresh-mall-admin-01.webp", alt: { zh: "生鲜商城运营后台首页", en: "Fresh mall admin dashboard home" } },
       { src: "assets/images/fresh-mall/fresh-mall-mini-01.webp", shape: "phone", alt: { zh: "生鲜商城小程序首页", en: "Fresh mall mini-program home" } },
