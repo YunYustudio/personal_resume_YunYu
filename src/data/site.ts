@@ -50,4 +50,5 @@ export const contact = {
     { label: "tearhacker@outlook.com", href: "mailto:tearhacker@outlook.com" },
   ],
   gitee: { label: "gitee.com/yunyustudio", href: "https://gitee.com/yunyustudio" },
+  wechat: { qrcode: "assets/mywxchat.jpg" },
 };

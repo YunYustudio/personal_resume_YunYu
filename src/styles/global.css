@@ -1490,6 +1490,92 @@ h3 {
   color: var(--muted);
 }
 
+/* ----------------------------- 微信二维码弹窗 ----------------------------- */
+.wx-modal[hidden] { display: none; }
+
+.wx-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  animation: modalIn 180ms ease both;
+}
+
+.wx-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 5, 10, 0.78);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.wx-modal-panel {
+  position: relative;
+  width: min(340px, 90vw);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.52);
+}
+
+.wx-modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #333;
+  font-size: 22px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: background 150ms ease;
+}
+.wx-modal-close:hover { background: rgba(0, 0, 0, 0.12); }
+
+.wx-modal-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.wx-modal-tip {
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+}
+.wx-modal-tip strong { color: #07c160; }
+
+.wx-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #07c160;
+  color: #fff !important;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  transition: background 150ms ease, transform 150ms ease;
+}
+.wx-btn:hover { background: #06ad56; transform: translateY(-1px); }
+.wx-btn:active { transform: translateY(0); }
+.wx-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
 /* ----------------------------- 滚动入场 ----------------------------- */
 .reveal {
   opacity: 0;

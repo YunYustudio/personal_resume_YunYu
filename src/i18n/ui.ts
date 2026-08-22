@@ -81,6 +81,9 @@ export const ui: Record<Lang, Record<string, string>> = {
     "contact.title": "面向 Software Developer / IT Application System Engineer / ERP 应用开发",
     "contact.lead":
       "适合需要全栈开发、内部应用支持、ERP 周边开发、SQL 排查、流程自动化、文档沉淀和跨职能沟通的岗位。",
+    "contact.wechat": "加我微信",
+    "contact.wechatTip": "扫码加微信好友，请备注来源，否则不通过",
+    "contact.wechatClose": "关闭",
     "footer.copy": "© 2026 蕴宇",
     "footer.rights": "Java Full-Stack / ERP Applications / Corp IT",
     "modal.closeAria": "关闭大图",
@@ -181,6 +184,9 @@ export const ui: Record<Lang, Record<string, string>> = {
       "Targeting Software Developer / IT Application System Engineer / ERP Application roles",
     "contact.lead":
       "A good fit for roles involving full-stack development, internal application support, ERP-adjacent development, SQL troubleshooting, workflow automation, documentation, and cross-functional communication.",
+    "contact.wechat": "WeChat",
+    "contact.wechatTip": "Scan to add me on WeChat. Please note your source, otherwise the request will be declined.",
+    "contact.wechatClose": "Close",
     "footer.copy": "© 2026 YunYu",
     "footer.rights": "Java Full-Stack / ERP Applications / Corp IT",
     "modal.closeAria": "Close large image",
