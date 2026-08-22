@@ -3,9 +3,9 @@ import type { TimelineEntry } from "./types";
 // 核心数据条
 export const stats = [
   { value: "237", labelKey: "stats.tasks" },
-  { value: "65", labelKey: "stats.shots" },
+  { value: "88", labelKey: "stats.shots" },
   { value: "100k+", labelKey: "stats.docs" },
-  { value: "4", labelKey: "stats.projects" },
+  { value: "6", labelKey: "stats.projects" },
 ];
 
 // 能力证明卡片（标题/描述复用 i18n 字典键，单一数据源）
@@ -27,11 +27,11 @@ export const timeline: TimelineEntry[] = [
     },
   },
   {
-    time: { zh: "2026.05 - 2026.07", en: "May 2026 - Jul 2026" },
+    time: { zh: "2026.05 - 至今", en: "May 2026 - Present" },
     title: { zh: "独立产品与全栈交付", en: "Independent product and full-stack delivery" },
     desc: {
-      zh: "将 ERP 经验沉淀到点餐系统、论坛小程序和内部 ERP 产品，保留截图、源码、文档和上线证据。",
-      en: "Turned ERP experience into an ordering system, forum mini-program, and internal ERP product with screenshots, source code, documentation, and launch evidence.",
+      zh: "将 ERP 经验沉淀到点餐系统、看雪论坛、蕴宇 ERP、生鲜商城、JX 高校论坛 + 跑腿与 VR 实景展厅，保留截图、源码、文档和上线证据。",
+      en: "Turned ERP experience into an ordering system, Kanxue forum, YunYu ERP, Fresh Mall, JX campus forum + errand, and VR digital showroom — all with screenshots, source code, documentation, and launch evidence.",
     },
   },
   {

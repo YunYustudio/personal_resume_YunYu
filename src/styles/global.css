@@ -1386,6 +1386,33 @@ h3 {
   margin-top: 6px;
 }
 
+.resume-strengths {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-strengths li {
+  position: relative;
+  padding: 12px 14px 12px 36px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.resume-strengths li::before {
+  content: "★";
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  color: var(--warm);
+  font-size: 16px;
+}
+
 .resume-download {
   display: inline-flex;
   align-items: center;

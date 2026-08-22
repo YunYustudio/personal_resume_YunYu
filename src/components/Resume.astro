@@ -57,6 +57,15 @@ import { withBase } from "../utils";
         </div>
 
         <div class="resume-section reveal">
+          <h3 data-i18n="resume.strengths">{ui.zh["resume.strengths"]}</h3>
+          <ul class="resume-strengths">
+            {resume.strengths.map((s) => (
+              <li data-zh={s.zh} data-en={s.en}>{s.zh}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="resume-section reveal">
           <h3 data-i18n="resume.experience">{ui.zh["resume.experience"]}</h3>
           {resume.experience.map((exp) => (
             <div class="exp-item">
