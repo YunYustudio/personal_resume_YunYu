@@ -85,12 +85,19 @@ export const resume = {
   // 教育
   education: [
     {
-      time: { zh: "2019 - 2023", en: "2019 - 2023" },
-      title: { zh: "计算机科学与技术（本科）", en: "Computer Science (B.Sc.)" },
-      org: { zh: "某高校", en: "University" },
+      time: { zh: "2020 - 2023", en: "2020 - 2023" },
+      title: { zh: "软件技术（专科）", en: "Software Technology (Associate Degree)" },
+      org: { zh: "江西工业职业技术学院", en: "Jiangxi Vocational & Technical College of Industry" },
       points: [
-        { zh: "主修数据结构、数据库原理、计算机网络、软件工程，具备扎实的工程基础。", en: "Focused on data structures, database principles, computer networking, and software engineering." },
-        { zh: "在校期间独立完成多个课程项目，涵盖 Web 开发、数据库设计与系统建模。", en: "Completed multiple course projects independently, covering web development, database design, and system modeling." },
+        { zh: "主修软件技术：Java 核心、数据库原理、Web 前后端开发，独立完成多项课程项目。", en: "Majored in Software Technology: Java core, database principles, and web front/back-end development; completed multiple course projects independently." },
+      ],
+    },
+    {
+      time: { zh: "2023 - 2025", en: "2023 - 2025" },
+      title: { zh: "软件工程（全日制统招本科·专升本）", en: "Software Engineering (Full-time Bachelor, Entrance)" },
+      org: { zh: "南昌大学（鄱阳湖校区）", en: "Nanchang University (Poyang Lake Campus)" },
+      points: [
+        { zh: "通过专升本统一招生考试升入全日制统招本科，系统学习软件工程、计算机网络与软件项目管理。", en: "Admitted to full-time undergraduate via the entrance examination for continuing education; studied software engineering, computer networking, and software project management." },
       ],
     },
   ],
