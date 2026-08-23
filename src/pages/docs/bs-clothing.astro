@@ -1,0 +1,65 @@
+---
+import Base from "../../layouts/Base.astro";
+import { withBase } from "../../utils";
+import { ui } from "../../i18n/ui";
+import { Content } from "../../markdown/bs-clothing.md";
+import GithubSlugger from "github-slugger";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+// 文档正文由 Markdown 模块渲染（Content），目录则按相同顺序用 github-slugger
+// 计算 slug，保证锚点与渲染出的 heading id 完全一致。
+// 注意：构建时 import.meta.url 指向编译产物目录，故改用项目根（process.cwd()）定位源文件。
+const raw = readFileSync(resolve(process.cwd(), "src/markdown/bs-clothing.md"), "utf-8");
+const slugger = new GithubSlugger();
+const toc: Heading[] = [];
+for (const line of raw.split("\n")) {
+  const m = /^(#{2,3})\s+(.+?)\s*$/.exec(line);
+  if (!m) continue;
+  const depth = m[1].length;
+  const text = m[2].replace(/[*_`]/g, "").trim();
+  toc.push({ depth, slug: slugger.slug(text), text });
+}
+
+const pageTitle = "服装品牌三端展示系统 · 技术文档";
+const pageDesc =
+  "服装品牌三端展示系统（PC官网 / H5 / 小程序 / Spring Boot 后端）技术文档：整体架构、数据库设计、后端与前端设计、性能优化落地、部署运维、踩坑记录与通用技术沉淀。";
+---
+
+<Base title={`${pageTitle} | 蕴宇`} description={pageDesc}>
+  <div class="doc-page">
+    <div class="doc-progress" id="docProgress" aria-hidden="true"></div>
+
+    <div class="doc-shell">
+      <aside class="doc-toc" aria-label="文档目录">
+        <p class="doc-toc__title" data-i18n="doc.toc">{ui.zh["doc.toc"]}</p>
+        <nav>
+          {toc.map((h) => (
+            <a
+              href={`#${h.slug}`}
+              class={h.depth === 3 ? "depth-3" : ""}
+              data-toc-link={h.slug}
+            >{h.text}</a>
+          ))}
+        </nav>
+      </aside>
+
+      <article class="doc-main">
+        <a class="doc-back" href={withBase("")}>
+          <span aria-hidden="true">←</span>
+          <span data-i18n="doc.back">{ui.zh["doc.back"]}</span>
+        </a>
+
+        <div class="doc-prose">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </div>
+</Base>

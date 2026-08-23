@@ -96,6 +96,7 @@ export const resume = {
   ],
   // 精选项目（关联作品集）
   projects: [
+    { title: { zh: "服装品牌三端展示系统", en: "Apparel Brand Three-End Showcase" }, summary: { zh: "PC官网 / H5 / 小程序 + Spring Boot 后端，商用上线交付，双语数据层与 2 核 4GB 低配性能工程。", en: "PC / H5 / Mini-Program + Spring Boot backend, commercially launched, with a bilingual data layer and 2-core 4GB performance engineering." } },
     { title: { zh: "JX 蕴宇高校论坛 + 校园跑腿", en: "JX YunYu Campus Forum + Errand" }, summary: { zh: "UGC 社区 + C2C 跑腿撮合全栈小程序，三进程轻量微服务，完整接入微信支付 V3。", en: "UGC community + C2C errand matching mini-program, three-process lightweight microservices, full WeChat Pay V3 integration." } },
     { title: { zh: "B2C 微信小程序点餐系统", en: "B2C WeChat Ordering System" }, summary: { zh: "Spring Boot + Vue3 前后端分离，含 RBAC、会员、营销与报表，约 10 万字文档。", en: "Spring Boot + Vue3, with RBAC, membership, marketing, and reporting; ~100k characters of docs." } },
     { title: { zh: "看雪校园微信小程序论坛", en: "Kanxue Campus Forum" }, summary: { zh: "全栈独立交付并上线商用的校园论坛小程序。", en: "Full-stack independent forum mini-program launched commercially." } },

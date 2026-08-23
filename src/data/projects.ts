@@ -229,4 +229,39 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    id: "bs-clothing",
+    layout: "reverse",
+    media: "three-up",
+    kicker: { zh: "商业上线交付项目 | 2026.08", en: "Commercial launched project | Aug 2026" },
+    badge: { zh: "商业上线", en: "Live" },
+    title: { zh: "服装品牌三端展示系统(PC官网 / H5 / 小程序)", en: "Apparel Brand Three-End Showcase (PC / H5 / Mini-Program)" },
+    desc: {
+      zh: "为客户(服装品牌方)从零搭建并已商用上线的三端展示系统:PC 官网 + H5 手机端(微信内打开即用)+ 微信小程序,共用一套 Spring Boot 后端。非技术运营人员可自助维护商品、风格、色卡与轮播图;全站中英双语(后台录入自动翻译);部署在 2 核 4GB 低配云服务器,支撑上千商品与 4GB+ 图片规模。",
+      en: "A commercially launched three-end showcase system built from scratch for a client (apparel brand): PC website + H5 mobile (opens directly in WeChat) + WeChat mini-program, all sharing one Spring Boot backend. Non-technical staff self-maintain products, styles, color cards, and banners; the site is fully bilingual (auto-translate on admin entry); it runs on a low-end 2-core 4GB cloud server supporting 1000+ products and 4GB+ of images.",
+    },
+    bullets: [
+      { zh: "三端一后端 + 接口即契约:前台 /api/v1 与后台 /api/admin 共用统一返回体与分页模型,小程序与 H5 复用同一套接口,一次开发多处生效。", en: "One backend for three ends with API-as-contract: frontend /api/v1 and admin /api/admin share unified response and pagination models; the mini-program and H5 reuse the same APIs, so one development benefits everywhere." },
+      { zh: "双语前置到数据层:业务表 xx/xx_en 双字段,后台录入中文自动翻译回填英文,无需运行时翻译引擎。", en: "Bilingual placed at the data layer: business tables carry xx/xx_en paired fields, and admin Chinese entry auto-translates into English with no runtime translation engine." },
+      { zh: "2 核 4GB 低配约束下的性能工程:服务端分页硬上限、图片即传即压缩(5→3 版)、Redis 声明式缓存、连接池收缩,上线至今稳定运行无 OOM。", en: "Performance engineering under a 2-core 4GB constraint: hard server-side pagination caps, on-upload image compression (5→3 versions), declarative Redis caching, and connection-pool tightening — stable in production with no OOM." },
+      { zh: "一套 H5 代码两种形态:移动端底部 TabBar / PC 左栏 SideNav 响应式切换;小程序 8 页与 H5 一一对应复用接口。", en: "Two forms from one H5 codebase: bottom TabBar on mobile / left SideNav on desktop via responsive breakpoints; the mini-program's 8 pages mirror H5 and reuse the same APIs." },
+    ],
+    tags: [
+      { zh: "Spring Boot 3", en: "Spring Boot 3" },
+      { zh: "MyBatis-Plus", en: "MyBatis-Plus" },
+      { zh: "Vue 3", en: "Vue 3" },
+      { zh: "Redis", en: "Redis" },
+      { zh: "微信小程序", en: "WeChat Mini Program" },
+      { zh: "MySQL 8", en: "MySQL 8" },
+    ],
+    links: [
+      { label: { zh: "线上演示", en: "Online Demo" }, href: "https://boshactlg.com/h5/" },
+      { label: { zh: "技术文档", en: "Technical Doc" }, href: "docs/bs-clothing/" },
+    ],
+    images: [
+      { src: "assets/images/bs-clothing/miniH5index.jpg", shape: "phone", alt: { zh: "服装系统 H5/小程序 首页", en: "Apparel system H5/mini-program home" } },
+      { src: "assets/images/bs-clothing/adminproduct.png", alt: { zh: "PC 管理后台商品管理", en: "PC admin product management" } },
+      { src: "assets/images/bs-clothing/pcindex.jpg", alt: { zh: "PC 官网首页", en: "PC official website home" } },
+    ],
+  },
 ];

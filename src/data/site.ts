@@ -3,9 +3,9 @@ import type { TimelineEntry } from "./types";
 // 核心数据条
 export const stats = [
   { value: "237", labelKey: "stats.tasks" },
-  { value: "88", labelKey: "stats.shots" },
+  { value: "98", labelKey: "stats.shots" },
   { value: "100k+", labelKey: "stats.docs" },
-  { value: "6", labelKey: "stats.projects" },
+  { value: "7", labelKey: "stats.projects" },
 ];
 
 // 能力证明卡片（标题/描述复用 i18n 字典键，单一数据源）
