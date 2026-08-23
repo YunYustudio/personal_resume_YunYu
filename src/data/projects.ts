@@ -14,7 +14,7 @@ export const projects: Project[] = [
     bullets: [
       { zh: "从零补齐商户/企业入驻、合同签署、销售数据联动、财务账单打通等业务链路。", en: "Built and improved merchant/company onboarding, contract signing, sales-data linkage, and finance billing workflows." },
       { zh: "处理合同续签、付款日期边界、账单生成、收据打印、水电报表、审批通知等生产级问题。", en: "Handled production issues involving contract renewal, payment-date boundaries, billing generation, receipt printing, utility reports, and approval notifications." },
-      { zh: "禅道累计完成任务 237 条，截图保留了任务数量、任务列表和具体问题记录。", en: "Completed 237 ZenTao tasks, with screenshot evidence of task counts, lists, and concrete issue records." },
+      { zh: "禅道累计完成任务 237 条，覆盖从需求受理到验收的全流程生产任务。", en: "Completed 237 ZenTao tasks across the full production workflow from intake to acceptance." },
     ],
     tags: [
       { zh: "PHP / Hyperf", en: "PHP / Hyperf" },
@@ -24,10 +24,7 @@ export const projects: Project[] = [
       { zh: "Docker", en: "Docker" },
     ],
     links: [],
-    images: [
-      { src: "assets/images/work-evidence/work-evidence-01.webp", alt: { zh: "禅道完成任务数量统计", en: "ZenTao completed task count statistics" } },
-      { src: "assets/images/work-evidence/work-evidence-05.webp", alt: { zh: "禅道具体任务截图", en: "Specific ZenTao task screenshot" } },
-    ],
+    images: [],
   },
   {
     id: "jx-forum",

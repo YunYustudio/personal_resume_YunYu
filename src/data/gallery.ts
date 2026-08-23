@@ -95,13 +95,6 @@ export const galleryItems: GalleryItem[] = [
   { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿认证入口", en: "Errand Verification Entry" }, src: "assets/images/jx-forum/jx-forum-mini-14.webp", shape: "phone" },
   { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿认证协议", en: "Errand Verification Agreement" }, src: "assets/images/jx-forum/jx-forum-mini-15.webp", shape: "phone" },
 
-  // ---------------- 工作证据 ----------------
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "完成任务数量", en: "Completed Task Count" }, src: "assets/images/work-evidence/work-evidence-01.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "最高任务量记录", en: "Peak Task Volume" }, src: "assets/images/work-evidence/work-evidence-02.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务列表", en: "ZenTao Task List" }, src: "assets/images/work-evidence/work-evidence-03.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "禅道任务详情", en: "ZenTao Task Detail" }, src: "assets/images/work-evidence/work-evidence-04.webp" },
-  { category: "work-evidence", project: { zh: "工作经验记录", en: "Work Evidence" }, title: { zh: "精准任务证据", en: "Concrete Task Evidence" }, src: "assets/images/work-evidence/work-evidence-05.webp" },
-
   // ---------------- 服装品牌三端系统 ----------------
   { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 轮播图管理", en: "Admin · Banner" }, src: "assets/images/bs-clothing/adminbanner.png" },
   { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 色卡分类", en: "Admin · Color Category" }, src: "assets/images/bs-clothing/admincategory.png" },
@@ -123,6 +116,5 @@ export const galleryFilters = [
   { id: "yunyu-erp", key: "filter.erp" },
   { id: "fresh-mall", key: "filter.fresh" },
   { id: "jx-forum", key: "filter.jx" },
-  { id: "work-evidence", key: "filter.work" },
   { id: "bs-clothing", key: "filter.bs" },
 ] as const;

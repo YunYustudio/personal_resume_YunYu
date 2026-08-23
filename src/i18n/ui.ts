@@ -70,7 +70,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.ordering": "点餐系统",
     "filter.forum": "论坛小程序",
     "filter.erp": "内部 ERP",
-    "filter.work": "工作证据",
+    
     "filter.fresh": "生鲜商城",
     "filter.jx": "高校论坛",
     "filter.bs": "服装品牌系统",
@@ -173,7 +173,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.ordering": "Ordering",
     "filter.forum": "Forum Mini Program",
     "filter.erp": "Internal ERP",
-    "filter.work": "Work Evidence",
+    
     "filter.fresh": "Fresh Mall",
     "filter.jx": "Campus Forum",
     "filter.bs": "Apparel System",
