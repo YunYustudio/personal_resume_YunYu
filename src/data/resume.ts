@@ -4,7 +4,7 @@ export const resume = {
   name: { zh: "蕴宇", en: "YunYu" },
   initials: "YY",
   role: { zh: "企业应用全栈开发者", en: "Enterprise Application Full-Stack Developer" },
-  location: { zh: "中国 · 深圳", en: "Shenzhen, China" },
+  location: { zh: "江西 · 宜春", en: "Yichun, Jiangxi" },
   // 基本信息
   basics: [
     { label: { zh: "求职意向", en: "Target" }, value: { zh: "Java 全栈 / IT 应用系统 / ERP 应用开发", en: "Java Full-Stack / IT Application Systems / ERP Development" } },
