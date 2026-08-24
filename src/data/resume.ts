@@ -8,13 +8,13 @@ export const resume = {
   // 基本信息
   basics: [
     { label: { zh: "求职意向", en: "Target" }, value: { zh: "Java 全栈 / IT 应用系统 / ERP 应用开发", en: "Java Full-Stack / IT Application Systems / ERP Development" } },
-    { label: { zh: "经验年限", en: "Experience" }, value: { zh: "商业 ERP 生产系统 1 年 + 独立产品交付 6 项", en: "1+ yr commercial ERP + 6 independent product deliveries" } },
+    { label: { zh: "经验年限", en: "Experience" }, value: { zh: "商业 ERP 生产系统 1 年 + 独立产品交付 7 项", en: "1+ yr commercial ERP + 7 independent product deliveries" } },
     { label: { zh: "开源仓库", en: "Open-Source" }, value: { zh: "github.com/YunYustudio", en: "github.com/YunYustudio" } },
     { label: { zh: "语言", en: "Languages" }, value: { zh: "中文（母语）、English（可读写）", en: "Chinese (native), English (working)" } },
   ],
   // 个人优势
   strengths: [
-    { zh: "全栈独立交付能力：熟练 Java 21 + Spring Boot 3.x 后端、uni-app / Vue3 前端与微信小程序生态，已独立交付 5 个开源项目 + 1 个 VR 数字展厅，覆盖电商、论坛、跑腿、ERP 与点餐多场景。", en: "Full-stack independent delivery: proficient in Java 21 + Spring Boot 3.x backend, uni-app / Vue3 frontend and WeChat mini-program ecosystem; delivered 5 open-source projects + 1 VR digital showroom across e-commerce, forum, errand, ERP, and ordering scenarios." },
+    { zh: "全栈独立交付能力：熟练 Java 21 + Spring Boot 3.x 后端、uni-app / Vue3 前端与微信小程序生态，已独立交付 7 个独立产品（含 1 个 VR 数字展厅），覆盖电商、论坛、跑腿、ERP、点餐与服饰展示多场景。", en: "Full-stack independent delivery: proficient in Java 21 + Spring Boot 3.x backend, uni-app / Vue3 frontend and WeChat mini-program ecosystem; delivered 7 independent products (incl. 1 VR digital showroom) across e-commerce, forum, errand, ERP, ordering, and apparel showcase scenarios." },
     { zh: "微信支付 V3 资金安全：自研支付中心（支付单/退款/转账三表状态机 + RSA-SHA256 回调验签 + AES-256-GCM 解密 + 幂等三重防护 + 定时对账兜底），以 Redisson 分布式锁保障并发安全。", en: "WeChat Pay V3 fund security: self-built payment center (three-table state machine + RSA-SHA256 callback verification + AES-256-GCM decryption + triple idempotency + scheduled reconciliation), with Redisson distributed locks for concurrency safety." },
     { zh: "架构取舍与务实落地：轻量微服务三进程部署在单台 4 核 4GB 服务器，不引入 Nacos/Docker/MQ 的场景下用静态路由 + 裸 jar + systemd 实现客户可运维的方案。", en: "Architecture trade-off and practical delivery: lightweight three-process microservices on a single 4-core 4GB server; without Nacos/Docker/MQ, uses static routing + bare jar + systemd for an operator-friendly deployment." },
     { zh: "商业实战经验：参与百万级商业 ERP 二次开发 10 个月，禅道累计 237 条生产任务，覆盖客户、合同、销售、账单、财务报表与审批全链路。", en: "Commercial hands-on experience: 10 months on a million-level commercial ERP secondary development, 237 ZenTao production tasks covering customer, contract, sales, billing, finance reports, and approval workflows." },
@@ -32,6 +32,7 @@ export const resume = {
         { zh: "Redis 7 / Redisson", en: "Redis 7 / Redisson" },
         { zh: "RabbitMQ", en: "RabbitMQ" },
         { zh: "Sa-Token / Nacos", en: "Sa-Token / Nacos" },
+        { zh: "ERP 业务建模", en: "ERP Business Modeling" },
       ],
     },
     {
@@ -43,6 +44,7 @@ export const resume = {
         { zh: "three.js / WebGL", en: "three.js / WebGL" },
         { zh: "HTML / CSS / JS", en: "HTML / CSS / JS" },
         { zh: "Tailwind / 响应式", en: "Tailwind / Responsive" },
+        { zh: "Playwright", en: "Playwright" },
       ],
     },
     {
@@ -56,6 +58,23 @@ export const resume = {
         { zh: "需求拆解 / 技术方案", en: "Requirement / Tech Design" },
         { zh: "禅道任务管理", en: "ZenTao Task Management" },
         { zh: "文档与 UAT", en: "Docs & UAT" },
+        { zh: "Git / Linux", en: "Git / Linux" },
+        { zh: "MCP 工具链", en: "MCP Toolchain" },
+      ],
+    },
+    {
+      group: { zh: "ERP / 业务领域", en: "ERP / Business Domain" },
+      items: [
+        { zh: "客户管理", en: "Customer Management" },
+        { zh: "合同管理", en: "Contract Management" },
+        { zh: "销售管理", en: "Sales Management" },
+        { zh: "账单管理", en: "Billing Management" },
+        { zh: "财务报表", en: "Financial Reports" },
+        { zh: "审批流程", en: "Approval Workflow" },
+        { zh: "水电表业务", en: "Utility Metering" },
+        { zh: "商户入驻", en: "Merchant Onboarding" },
+        { zh: "收据打印", en: "Receipt Printing" },
+        { zh: "O2O 商圈系统", en: "O2O Business District" },
       ],
     },
   ],
