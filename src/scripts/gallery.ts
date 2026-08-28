@@ -25,6 +25,7 @@ function initGallery(): void {
   // 灯箱
   const modal = document.querySelector<HTMLElement>("#imageModal");
   if (!modal) return;
+  const modalEl = modal; // 闭包内 TS 无法沿用上方判空收窄，固定为非空引用
   const modalImage = modal.querySelector<HTMLImageElement>("#modalImage");
   const modalTitle = modal.querySelector<HTMLElement>("#modalTitle");
   const modalMeta = modal.querySelector<HTMLElement>("#modalMeta");
@@ -40,13 +41,13 @@ function initGallery(): void {
     modalImage.alt = img.alt;
     modalTitle.textContent = strong?.textContent ?? "";
     modalMeta.textContent = span?.textContent ?? "";
-    modal.hidden = false;
+    modalEl.hidden = false;
     document.body.style.overflow = "hidden";
-    modal.querySelector<HTMLButtonElement>(".modal-close")?.focus();
+    modalEl.querySelector<HTMLButtonElement>(".modal-close")?.focus();
   }
 
   function close(): void {
-    modal.hidden = true;
+    modalEl.hidden = true;
     if (modalImage) modalImage.src = "";
     document.body.style.overflow = "";
     lastFocused?.focus();
@@ -64,7 +65,7 @@ function initGallery(): void {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.hidden) close();
+    if (event.key === "Escape" && !modalEl.hidden) close();
   });
 }
 

@@ -96,16 +96,16 @@ export const galleryItems: GalleryItem[] = [
   { category: "jx-forum", project: { zh: "JX 高校论坛", en: "JX Campus Forum" }, title: { zh: "跑腿认证协议", en: "Errand Verification Agreement" }, src: "assets/images/jx-forum/jx-forum-mini-15.webp", shape: "phone" },
 
   // ---------------- 服装品牌三端系统 ----------------
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 轮播图管理", en: "Admin · Banner" }, src: "assets/images/bs-clothing/adminbanner.png" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 色卡分类", en: "Admin · Color Category" }, src: "assets/images/bs-clothing/admincategory.png" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 风格管理", en: "Admin · Style" }, src: "assets/images/bs-clothing/admindashion.png" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 商品管理", en: "Admin · Product" }, src: "assets/images/bs-clothing/adminproduct.png" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 首页", en: "Mini/H5 · Home" }, src: "assets/images/bs-clothing/miniH5index.jpg", shape: "phone" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 分类", en: "Mini/H5 · Category" }, src: "assets/images/bs-clothing/miniH5Category.jpg", shape: "phone" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 新品", en: "Mini/H5 · New Arrivals" }, src: "assets/images/bs-clothing/minih5newporduct.jpg", shape: "phone" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 详情", en: "Mini/H5 · Detail" }, src: "assets/images/bs-clothing/minih5detail.jpg", shape: "phone" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 首页", en: "PC Site · Home" }, src: "assets/images/bs-clothing/pcindex.jpg" },
-  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 详情", en: "PC Site · Detail" }, src: "assets/images/bs-clothing/pcdetail.png" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 轮播图管理", en: "Admin · Banner" }, src: "assets/images/bs-clothing/adminbanner.webp" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 色卡分类", en: "Admin · Color Category" }, src: "assets/images/bs-clothing/admincategory.webp" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 风格管理", en: "Admin · Style" }, src: "assets/images/bs-clothing/admindashion.webp" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "后台 · 商品管理", en: "Admin · Product" }, src: "assets/images/bs-clothing/adminproduct.webp" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 首页", en: "Mini/H5 · Home" }, src: "assets/images/bs-clothing/miniH5index.webp", shape: "phone" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 分类", en: "Mini/H5 · Category" }, src: "assets/images/bs-clothing/miniH5Category.webp", shape: "phone" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 新品", en: "Mini/H5 · New Arrivals" }, src: "assets/images/bs-clothing/minih5newporduct.webp", shape: "phone" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 详情", en: "Mini/H5 · Detail" }, src: "assets/images/bs-clothing/minih5detail.webp", shape: "phone" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 首页", en: "PC Site · Home" }, src: "assets/images/bs-clothing/pcindex.webp" },
+  { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 详情", en: "PC Site · Detail" }, src: "assets/images/bs-clothing/pcdetail.webp" },
 ];
 
 // 画廊筛选分类（与 filter 按钮对应）

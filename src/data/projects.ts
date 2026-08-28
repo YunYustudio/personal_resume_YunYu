@@ -256,9 +256,9 @@ export const projects: Project[] = [
       { label: { zh: "技术文档", en: "Technical Doc" }, href: "docs/bs-clothing/" },
     ],
     images: [
-      { src: "assets/images/bs-clothing/miniH5index.jpg", shape: "phone", alt: { zh: "服装系统 H5/小程序 首页", en: "Apparel system H5/mini-program home" } },
-      { src: "assets/images/bs-clothing/adminproduct.png", alt: { zh: "PC 管理后台商品管理", en: "PC admin product management" } },
-      { src: "assets/images/bs-clothing/pcindex.jpg", alt: { zh: "PC 官网首页", en: "PC official website home" } },
+      { src: "assets/images/bs-clothing/miniH5index.webp", shape: "phone", alt: { zh: "服装系统 H5/小程序 首页", en: "Apparel system H5/mini-program home" } },
+      { src: "assets/images/bs-clothing/adminproduct.webp", alt: { zh: "PC 管理后台商品管理", en: "PC admin product management" } },
+      { src: "assets/images/bs-clothing/pcindex.webp", alt: { zh: "PC 官网首页", en: "PC official website home" } },
     ],
   },
 ];

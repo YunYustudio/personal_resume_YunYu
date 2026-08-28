@@ -1,7 +1,37 @@
 // 粒子背景 + 樱花飘落 + 滚动入场动画（移植自原 script.js，TS 化）
+export {};
+
 const reduceMotion =
   typeof window !== "undefined" &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function debounce(fn: () => void, ms: number): () => void {
+  let timer = 0;
+  return () => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(fn, ms);
+  };
+}
+
+// 页面不可见时暂停 rAF，恢复可见时续跑，避免后台空耗 CPU/GPU
+function createLoop(frame: () => void): { start: () => void } {
+  let running = false;
+  const tick = (): void => {
+    if (document.hidden) {
+      running = false;
+      return;
+    }
+    frame();
+    requestAnimationFrame(tick);
+  };
+  return {
+    start() {
+      if (running || document.hidden) return;
+      running = true;
+      requestAnimationFrame(tick);
+    },
+  };
+}
 
 /* ----------------------------- 粒子 ----------------------------- */
 function initParticles(): void {
@@ -53,7 +83,7 @@ function initParticles(): void {
     ctx!.stroke();
   }
 
-  function tick(): void {
+  function frame(): void {
     ctx!.clearRect(0, 0, window.innerWidth, window.innerHeight);
     for (let i = 0; i < particles.length; i += 1) {
       const p = particles[i];
@@ -64,10 +94,11 @@ function initParticles(): void {
       if (p.y < -20) p.y = window.innerHeight + 20;
       if (p.y > window.innerHeight + 20) p.y = -20;
 
-      const pd = Math.hypot(p.x - pointer.x, p.y - pointer.y);
-      if (pd < 140) {
-        p.x += (p.x - pointer.x) * 0.003;
-        p.y += (p.y - pointer.y) * 0.003;
+      const pdx = p.x - pointer.x;
+      const pdy = p.y - pointer.y;
+      if (pdx * pdx + pdy * pdy < 140 * 140) {
+        p.x += pdx * 0.003;
+        p.y += pdy * 0.003;
       }
 
       ctx!.fillStyle = `hsla(${p.hue}, 90%, 68%, 0.72)`;
@@ -77,19 +108,24 @@ function initParticles(): void {
 
       for (let j = i + 1; j < particles.length; j += 1) {
         const other = particles[j];
-        const distance = Math.hypot(p.x - other.x, p.y - other.y);
+        const dx = p.x - other.x;
+        if (dx > 118 || dx < -118) continue;
+        const dy = p.y - other.y;
+        if (dy > 118 || dy < -118) continue;
+        const distance = Math.hypot(dx, dy);
         if (distance < 118) {
           drawLine(p, other, (1 - distance / 118) * 0.16);
         }
       }
     }
-    requestAnimationFrame(tick);
   }
 
-  window.addEventListener("resize", () => {
+  const loop = createLoop(frame);
+
+  window.addEventListener("resize", debounce(() => {
     resize();
     createParticles();
-  });
+  }, 150));
   window.addEventListener("pointermove", (event) => {
     pointer.x = event.clientX;
     pointer.y = event.clientY;
@@ -101,7 +137,7 @@ function initParticles(): void {
 
   resize();
   createParticles();
-  tick();
+  loop.start();
 }
 
 /* ----------------------------- 樱花 ----------------------------- */
@@ -179,7 +215,7 @@ function initSakura(): void {
     ctx!.restore();
   }
 
-  function tick(): void {
+  function frame(): void {
     time += 0.012;
     ctx!.clearRect(0, 0, width, height);
     petals.forEach((petal) => {
@@ -192,17 +228,18 @@ function initSakura(): void {
       }
       drawPetal(petal);
     });
-    requestAnimationFrame(tick);
   }
 
-  window.addEventListener("resize", () => {
+  const loop = createLoop(frame);
+
+  window.addEventListener("resize", debounce(() => {
     resize();
     resetPetals();
-  });
+  }, 150));
 
   resize();
   resetPetals();
-  tick();
+  loop.start();
 }
 
 /* ------------------- 锚点导航：同页平滑滚动，跨页交给浏览器 ------------------- */
@@ -220,7 +257,7 @@ function initSmoothNav(): void {
     const hash = href.slice(hashIndex + 1);
     if (!hash) return;
     const target = document.getElementById(hash);
-    if (!target) return; // 区块不在当前页 → 放行，跳回首页并定位
+    if (!target) return; // 区块不在当前页 → 放行，跳回首页并定位区块
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
     history.replaceState(null, "", `#${hash}`);

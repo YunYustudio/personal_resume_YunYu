@@ -59,6 +59,7 @@ function linkHref(href: string): string {
                 data-alt-en={img.alt.en}
                 alt={img.alt.zh}
                 loading="lazy"
+                decoding="async"
               />
             ))}
             {p.video && <VideoPlayer video={p.video} />}

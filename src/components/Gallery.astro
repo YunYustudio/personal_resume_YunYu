@@ -29,7 +29,7 @@ import { withBase } from "../utils";
         <article class="gallery-card reveal" data-gallery-card data-category={item.category}>
           <button type="button" aria-label={`${ui.zh["gallery.viewLarge"]}${item.title.zh}`}>
             <span class={`gallery-image-wrap ${item.shape === "phone" ? "phone" : ""}`}>
-              <img src={withBase(item.src)} alt={item.title.zh} loading={i < 4 ? "eager" : "lazy"} />
+              <img src={withBase(item.src)} alt={item.title.zh} loading={i < 4 ? "eager" : "lazy"} decoding="async" />
             </span>
             <span class="gallery-caption">
               <strong data-zh={item.title.zh} data-en={item.title.en}>{item.title.zh}</strong>
