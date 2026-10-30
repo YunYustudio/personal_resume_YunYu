@@ -2,6 +2,39 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "pojing-forum",
+    layout: "default",
+    media: "three-up",
+    kicker: { zh: "独立全栈开源项目 | 2026.04 - 2026.08", en: "Independent full-stack open-source project | Apr 2026 - Aug 2026" },
+    badge: { zh: "开源", en: "Open Source" },
+    title: { zh: "破镜论坛 · 三端 + Java 微服务社区系统", en: "PoJing Forum · Three-End + Java Microservices Community" },
+    desc: {
+      zh: "从零独立交付的完整社区系统：PC 前台、管理后台、uni-app 移动端三套客户端，经一个网关进入 core / support / business 三个业务服务，数据拆分到 14 个 PostgreSQL 逻辑库。研发三个月、上线运营两个月，覆盖账号、内容、审核、互动、成长、付费解锁与运营后台的完整链路，Apache 2.0 全量开源。",
+      en: "A complete community system delivered solo from scratch: three clients (PC site, admin console, uni-app mobile) enter one gateway that routes into three business services (core / support / business), with data split across 14 PostgreSQL logical databases. Three months of development plus two months of launch and operations, covering accounts, content, moderation, interaction, growth, paid unlocks, and the ops console. Fully open-sourced under Apache 2.0.",
+    },
+    bullets: [
+      { zh: "网关统一治理：三套客户端前缀分流 + 按危险程度分组限流（验证码 1/s、登录 1/s、搜索 5/s、默认 100/s 且优先按用户维度）+ Resilience4j 熔断降级 + 可信代理还原真实 IP。", en: "Centralized gateway governance: three client prefixes, rate limits grouped by risk (email code 1/s, login 1/s, search 5/s, default 100/s keyed by user first), Resilience4j circuit breaking with fallbacks, and trusted-proxy real-IP recovery." },
+      { zh: "内部接口 HMAC 签名：method / path / service / timestamp / nonce / body 摘要拼规范化串，常量时间比较；业务服务不重复做 URL 级鉴权，避免端口误暴露后的越权。", en: "HMAC-signed internal APIs: a canonical string of method / path / service / timestamp / nonce / body digest compared in constant time; business services skip duplicate URL-level auth, closing the gap left by an accidentally exposed port." },
+      { zh: "跨服务不用分布式事务：余额扣减走本地事务 + 事件补偿，消费端按 eventId 唯一约束保证幂等；缓存 key 统一构造并带版本前缀，结构变更即整体失效。", en: "No distributed transactions across services: balance deduction uses a local transaction plus event compensation, with consumers made idempotent via a unique eventId constraint; cache keys are centrally built with a version prefix so a shape change invalidates the whole set." },
+    ],
+    tags: [
+      { zh: "Java 21", en: "Java 21" },
+      { zh: "Spring Boot 3.5", en: "Spring Boot 3.5" },
+      { zh: "Spring Cloud Gateway", en: "Spring Cloud Gateway" },
+      { zh: "Next.js 16", en: "Next.js 16" },
+      { zh: "uni-app", en: "uni-app" },
+      { zh: "PostgreSQL", en: "PostgreSQL" },
+    ],
+    links: [
+      { label: { zh: "Gitee 源码", en: "Gitee Source" }, href: "https://gitee.com/yunyustudio/PoJingForumOpenSource" },
+    ],
+    images: [
+      { src: "assets/images/pojing-forum/pojing-forum-app-01.webp", shape: "phone", alt: { zh: "破镜论坛移动端板块列表", en: "PoJing Forum mobile board list" } },
+      { src: "assets/images/pojing-forum/pojing-forum-pc-01.webp", alt: { zh: "破镜论坛 PC 前台板块中心", en: "PoJing Forum PC board center" } },
+      { src: "assets/images/pojing-forum/pojing-forum-pc-08.webp", alt: { zh: "破镜论坛主题特效", en: "PoJing Forum theme effects" } },
+    ],
+  },
+  {
     id: "work-evidence",
     layout: "reverse",
     media: "dashboard-pair",

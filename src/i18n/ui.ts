@@ -88,6 +88,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.fresh": "生鲜商城",
     "filter.jx": "高校论坛",
     "filter.bs": "服装品牌系统",
+    "filter.pojing": "破镜论坛",
     "timeline.eyebrow": "Timeline",
     "timeline.title": "经历脉络",
     "timeline.lead":
@@ -205,6 +206,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     "filter.fresh": "Fresh Mall",
     "filter.jx": "Campus Forum",
     "filter.bs": "Apparel System",
+    "filter.pojing": "PoJing Forum",
     "timeline.eyebrow": "Timeline",
     "timeline.title": "Career Timeline",
     "timeline.lead":

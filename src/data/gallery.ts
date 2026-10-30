@@ -106,6 +106,31 @@ export const galleryItems: GalleryItem[] = [
   { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "小程序/H5 · 详情", en: "Mini/H5 · Detail" }, src: "assets/images/bs-clothing/minih5detail.webp", shape: "phone" },
   { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 首页", en: "PC Site · Home" }, src: "assets/images/bs-clothing/pcindex.webp" },
   { category: "bs-clothing", project: { zh: "服装品牌三端系统", en: "Apparel Brand System" }, title: { zh: "PC官网 · 详情", en: "PC Site · Detail" }, src: "assets/images/bs-clothing/pcdetail.webp" },
+
+  // ---------------- 破镜论坛（三端 + Java 微服务） ----------------
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 板块中心", en: "Web · Board Center" }, src: "assets/images/pojing-forum/pojing-forum-pc-01.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 帖子详情", en: "Web · Post Detail" }, src: "assets/images/pojing-forum/pojing-forum-pc-02.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 个人主页", en: "Web · User Profile" }, src: "assets/images/pojing-forum/pojing-forum-pc-03.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 每日签到", en: "Web · Daily Check-in" }, src: "assets/images/pojing-forum/pojing-forum-pc-04.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 退回通知", en: "Web · Rejection Notice" }, src: "assets/images/pojing-forum/pojing-forum-pc-05.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 邮箱验证码", en: "Web · Email Verification" }, src: "assets/images/pojing-forum/pojing-forum-pc-06.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 表情工坊", en: "Web · Emoji Studio" }, src: "assets/images/pojing-forum/pojing-forum-pc-07.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 主题特效", en: "Web · Theme Effects" }, src: "assets/images/pojing-forum/pojing-forum-pc-08.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "前台 · 暗色主题", en: "Web · Dark Theme" }, src: "assets/images/pojing-forum/pojing-forum-pc-09.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 运营仪表盘", en: "Admin · Dashboard" }, src: "assets/images/pojing-forum/pojing-forum-admin-01.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 管理员账号", en: "Admin · Accounts" }, src: "assets/images/pojing-forum/pojing-forum-admin-02.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 内容审核", en: "Admin · Moderation" }, src: "assets/images/pojing-forum/pojing-forum-admin-03.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 登录日志", en: "Admin · Login Logs" }, src: "assets/images/pojing-forum/pojing-forum-admin-04.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 论坛公告", en: "Admin · Announcements" }, src: "assets/images/pojing-forum/pojing-forum-admin-05.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 资源管理", en: "Admin · Resources" }, src: "assets/images/pojing-forum/pojing-forum-admin-06.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 版本发行", en: "Admin · App Release" }, src: "assets/images/pojing-forum/pojing-forum-admin-07.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "后台 · 自定义插件", en: "Admin · Custom Plugin" }, src: "assets/images/pojing-forum/pojing-forum-admin-08.webp" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "移动端 · 板块列表", en: "App · Board List" }, src: "assets/images/pojing-forum/pojing-forum-app-01.webp", shape: "phone" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "移动端 · 板块详情", en: "App · Board Detail" }, src: "assets/images/pojing-forum/pojing-forum-app-02.webp", shape: "phone" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "移动端 · 帖子详情", en: "App · Post Detail" }, src: "assets/images/pojing-forum/pojing-forum-app-03.webp", shape: "phone" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "移动端 · 登录", en: "App · Login" }, src: "assets/images/pojing-forum/pojing-forum-app-04.webp", shape: "phone" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "移动端 · 主题切换", en: "App · Theme Switcher" }, src: "assets/images/pojing-forum/pojing-forum-app-05.webp", shape: "phone" },
+  { category: "pojing-forum", project: { zh: "破镜论坛", en: "PoJing Forum" }, title: { zh: "研发 · 提交记录", en: "Dev · Commit History" }, src: "assets/images/pojing-forum/pojing-forum-commits.webp" },
 ];
 
 // 画廊筛选分类（与 filter 按钮对应）
@@ -117,4 +142,5 @@ export const galleryFilters = [
   { id: "fresh-mall", key: "filter.fresh" },
   { id: "jx-forum", key: "filter.jx" },
   { id: "bs-clothing", key: "filter.bs" },
+  { id: "pojing-forum", key: "filter.pojing" },
 ] as const;

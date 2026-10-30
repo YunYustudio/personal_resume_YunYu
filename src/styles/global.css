@@ -1316,6 +1316,8 @@ h3 {
   height: 86px;
   display: grid;
   place-items: center;
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
   background: rgba(45, 212, 191, 0.1);
@@ -1323,6 +1325,14 @@ h3 {
   font-size: 30px;
   font-weight: 900;
   box-shadow: var(--glow);
+}
+
+.resume-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .resume-name {

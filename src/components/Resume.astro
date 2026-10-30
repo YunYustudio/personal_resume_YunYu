@@ -18,7 +18,18 @@ import WxIcon from "./WxIcon.astro";
       <!-- 侧栏：基本信息 -->
       <aside class="resume-aside">
         <div class="resume-card reveal">
-          <div class="resume-avatar">{resume.initials}</div>
+          <div class="resume-avatar">
+            <span aria-hidden="true">{resume.initials}</span>
+            <img
+              src={withBase("assets/avatar.webp")}
+              alt={resume.name.zh}
+              width="86"
+              height="86"
+              loading="eager"
+              decoding="async"
+              onerror="this.style.display='none'"
+            />
+          </div>
           <div class="resume-name" data-zh={resume.name.zh} data-en={resume.name.en}>{resume.name.zh}</div>
           <div class="resume-role" data-zh={resume.role.zh} data-en={resume.role.en}>{resume.role.zh}</div>
           <div class="resume-role" data-zh={resume.location.zh} data-en={resume.location.en} style="color:var(--muted);font-weight:700">{resume.location.zh}</div>

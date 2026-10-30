@@ -4,17 +4,19 @@ export const resume = {
   name: { zh: "蕴宇", en: "YunYu" },
   initials: "YY",
   role: { zh: "企业应用全栈开发者", en: "Enterprise Application Full-Stack Developer" },
-  location: { zh: "江西 · 宜春", en: "Yichun, Jiangxi" },
+  location: { zh: "江西省", en: "Jiangxi Province" },
   // 基本信息
   basics: [
     { label: { zh: "求职意向", en: "Target" }, value: { zh: "Java 全栈 / IT 应用系统 / ERP 应用开发", en: "Java Full-Stack / IT Application Systems / ERP Development" } },
-    { label: { zh: "经验年限", en: "Experience" }, value: { zh: "商业 ERP 生产系统 1 年 + 独立产品交付 7 项", en: "1+ yr commercial ERP + 7 independent product deliveries" } },
-    { label: { zh: "开源仓库", en: "Open-Source" }, value: { zh: "github.com/YunYustudio", en: "github.com/YunYustudio" } },
+    { label: { zh: "经验年限", en: "Experience" }, value: { zh: "商业 ERP 生产系统 1 年 + 独立产品交付 8 项", en: "1+ yr commercial ERP + 8 independent product deliveries" } },
+    { label: { zh: "开源仓库", en: "Open-Source" }, value: { zh: "gitee.com/yunyustudio · github.com/YunYustudio", en: "gitee.com/yunyustudio · github.com/YunYustudio" } },
+    { label: { zh: "联系邮箱", en: "Email" }, value: { zh: "tearhacker@outlook.com", en: "tearhacker@outlook.com" } },
     { label: { zh: "语言", en: "Languages" }, value: { zh: "中文（母语）、English（可读写）", en: "Chinese (native), English (working)" } },
   ],
   // 个人优势
   strengths: [
-    { zh: "全栈独立交付能力：熟练 Java 21 + Spring Boot 3.x 后端、uni-app / Vue3 前端与微信小程序生态，已独立交付 7 个独立产品（含 1 个 VR 数字展厅），覆盖电商、论坛、跑腿、ERP、点餐与服饰展示多场景。", en: "Full-stack independent delivery: proficient in Java 21 + Spring Boot 3.x backend, uni-app / Vue3 frontend and WeChat mini-program ecosystem; delivered 7 independent products (incl. 1 VR digital showroom) across e-commerce, forum, errand, ERP, ordering, and apparel showcase scenarios." },
+    { zh: "全栈独立交付能力：熟练 Java 21 + Spring Boot 3.x 后端、uni-app / Vue3 / Next.js 前端与微信小程序生态，已独立交付 8 个独立产品（含 1 个 VR 数字展厅、1 套三端微服务论坛），覆盖电商、论坛、跑腿、ERP、点餐与服饰展示多场景。", en: "Full-stack independent delivery: proficient in Java 21 + Spring Boot 3.x backend, uni-app / Vue3 / Next.js frontend and WeChat mini-program ecosystem; delivered 8 independent products (incl. 1 VR digital showroom and 1 three-end microservice forum) across e-commerce, forum, errand, ERP, ordering, and apparel showcase scenarios." },
+    { zh: "微服务治理与安全：网关统一鉴权 + 内部接口 HMAC 签名（method/path/service/timestamp/nonce/body 摘要，常量时间比较），按危险程度分组限流与 Resilience4j 熔断降级，业务服务不重复做 URL 级鉴权。", en: "Microservice governance and security: centralized gateway auth plus HMAC-signed internal APIs (method/path/service/timestamp/nonce/body digest, constant-time comparison), risk-tiered rate limiting and Resilience4j circuit breaking, with no duplicate URL-level auth inside business services." },
     { zh: "微信支付 V3 资金安全：自研支付中心（支付单/退款/转账三表状态机 + RSA-SHA256 回调验签 + AES-256-GCM 解密 + 幂等三重防护 + 定时对账兜底），以 Redisson 分布式锁保障并发安全。", en: "WeChat Pay V3 fund security: self-built payment center (three-table state machine + RSA-SHA256 callback verification + AES-256-GCM decryption + triple idempotency + scheduled reconciliation), with Redisson distributed locks for concurrency safety." },
     { zh: "架构取舍与务实落地：轻量微服务三进程部署在单台 4 核 4GB 服务器，不引入 Nacos/Docker/MQ 的场景下用静态路由 + 裸 jar + systemd 实现客户可运维的方案。", en: "Architecture trade-off and practical delivery: lightweight three-process microservices on a single 4-core 4GB server; without Nacos/Docker/MQ, uses static routing + bare jar + systemd for an operator-friendly deployment." },
     { zh: "商业实战经验：参与百万级商业 ERP 二次开发 10 个月，禅道累计 237 条生产任务，覆盖客户、合同、销售、账单、财务报表与审批全链路。", en: "Commercial hands-on experience: 10 months on a million-level commercial ERP secondary development, 237 ZenTao production tasks covering customer, contract, sales, billing, finance reports, and approval workflows." },
@@ -27,8 +29,11 @@ export const resume = {
       items: [
         { zh: "Java 21 / Spring Boot 3.x", en: "Java 21 / Spring Boot 3.x" },
         { zh: "Spring Cloud Gateway", en: "Spring Cloud Gateway" },
+        { zh: "Spring Cloud OpenFeign", en: "Spring Cloud OpenFeign" },
+        { zh: "Resilience4j 熔断限流", en: "Resilience4j Circuit Breaking" },
         { zh: "PHP / Hyperf", en: "PHP / Hyperf" },
         { zh: "MySQL 8.4", en: "MySQL 8.4" },
+        { zh: "PostgreSQL", en: "PostgreSQL" },
         { zh: "Redis 7 / Redisson", en: "Redis 7 / Redisson" },
         { zh: "RabbitMQ", en: "RabbitMQ" },
         { zh: "Sa-Token / Nacos", en: "Sa-Token / Nacos" },
@@ -39,6 +44,8 @@ export const resume = {
       group: { zh: "前端", en: "Frontend" },
       items: [
         { zh: "Vue3", en: "Vue3" },
+        { zh: "Next.js 16 / React 19", en: "Next.js 16 / React 19" },
+        { zh: "TypeScript", en: "TypeScript" },
         { zh: "uni-app 小程序", en: "uni-app Mini Program" },
         { zh: "微信小程序", en: "WeChat Mini Program" },
         { zh: "three.js / WebGL", en: "three.js / WebGL" },
@@ -51,6 +58,7 @@ export const resume = {
       group: { zh: "工程与交付", en: "Engineering & Delivery" },
       items: [
         { zh: "Docker 部署", en: "Docker Deployment" },
+        { zh: "Nginx / HTTPS 部署", en: "Nginx / HTTPS Deployment" },
         { zh: "XXL-Job 调度", en: "XXL-Job Scheduling" },
         { zh: "微信支付 V3", en: "WeChat Pay V3" },
         { zh: "AES / RSA 加密", en: "AES / RSA Encryption" },
@@ -83,7 +91,7 @@ export const resume = {
     {
       time: { zh: "2025.06 - 2026.04", en: "Jun 2025 - Apr 2026" },
       title: { zh: "商业管理 ERP 二次开发工程师", en: "Commercial ERP Secondary Development Engineer" },
-      org: { zh: "深圳某软件公司", en: "A software company in Shenzhen" },
+      org: { zh: "深圳某软件公司（因网络避嫌，不便披露公司全称）", en: "A software company in Shenzhen (company name withheld for online discretion)" },
       points: [
         { zh: "参与百万级商业 ERP 系统二次开发，覆盖客户、合同、销售、账单、财务报表与审批。", en: "Secondary development of a large commercial ERP platform covering customers, contracts, sales, billing, finance reports, and approvals." },
         { zh: "从零补齐商户/企业入驻、合同签署、销售数据联动、财务账单打通等业务链路。", en: "Built merchant/company onboarding, e-sign contracts, sales-data linkage, and finance billing workflows." },
@@ -95,7 +103,8 @@ export const resume = {
       title: { zh: "独立全栈产品开发者", en: "Independent Full-Stack Product Developer" },
       org: { zh: "自有产品 / 开源项目", en: "Own products / open-source" },
       points: [
-        { zh: "独立交付 B2C 点餐系统、看雪校园论坛小程序、蕴宇 ERP、生鲜商城小程序、JX 高校论坛 + 校园跑腿与 VR 实景展厅，均保留上线与文档证据。", en: "Independently delivered B2C ordering, Kanxue campus forum, YunYu ERP, Fresh Mall, JX campus forum + errand, and VR digital showroom — all with launch and documentation evidence." },
+        { zh: "独立交付破镜论坛（三端 + Java 微服务）、B2C 点餐系统、看雪校园论坛小程序、蕴宇 ERP、生鲜商城小程序、JX 高校论坛 + 校园跑腿与 VR 实景展厅，均保留上线与文档证据。", en: "Independently delivered PoJing Forum (three clients + Java microservices), B2C ordering, Kanxue campus forum, YunYu ERP, Fresh Mall, JX campus forum + errand, and VR digital showroom — all with launch and documentation evidence." },
+        { zh: "破镜论坛：三套客户端经单一网关进入 core / support / business 三个服务，数据拆分 14 个 PostgreSQL 逻辑库；跨服务用本地事务 + 事件补偿替代分布式事务，消费端按 eventId 唯一约束保证幂等。", en: "PoJing Forum: three clients enter one gateway routing to three services (core / support / business) over 14 PostgreSQL logical databases; cross-service consistency via local transactions plus event compensation instead of distributed transactions, with idempotent consumers enforced by a unique eventId constraint." },
         { zh: "搭建「小程序 + PC 后台 + 后端」三端协同架构，沉淀约 10 万字项目文档。", en: "Built three-tier mini-program + PC admin + backend architectures; produced ~100k characters of documentation." },
         { zh: "自研订单状态机与微信支付 V3 退款体系，以分布式锁保障并发安全。", en: "Built an idempotent order state machine and WeChat Pay V3 refund system with distributed-lock safety." },
       ],
@@ -122,6 +131,7 @@ export const resume = {
   ],
   // 精选项目（关联作品集）
   projects: [
+    { title: { zh: "破镜论坛 · 三端 + Java 微服务", en: "PoJing Forum · Three-End + Java Microservices" }, summary: { zh: "PC 前台 / 管理后台 / uni-app 三端 + 网关 + 三个业务服务，14 个 PostgreSQL 逻辑库；网关统一鉴权、内部 HMAC 签名、分组限流与熔断降级，Apache 2.0 全量开源。", en: "PC site / admin console / uni-app plus a gateway and three business services over 14 PostgreSQL logical databases; centralized gateway auth, HMAC-signed internal APIs, tiered rate limiting and circuit breaking. Fully open-sourced under Apache 2.0." } },
     { title: { zh: "服装品牌三端展示系统", en: "Apparel Brand Three-End Showcase" }, summary: { zh: "PC官网 / H5 / 小程序 + Spring Boot 后端，商用上线交付，双语数据层与 2 核 4GB 低配性能工程。", en: "PC / H5 / Mini-Program + Spring Boot backend, commercially launched, with a bilingual data layer and 2-core 4GB performance engineering." } },
     { title: { zh: "JX 蕴宇高校论坛 + 校园跑腿", en: "JX YunYu Campus Forum + Errand" }, summary: { zh: "UGC 社区 + C2C 跑腿撮合全栈小程序，三进程轻量微服务，完整接入微信支付 V3。", en: "UGC community + C2C errand matching mini-program, three-process lightweight microservices, full WeChat Pay V3 integration." } },
     { title: { zh: "B2C 微信小程序点餐系统", en: "B2C WeChat Ordering System" }, summary: { zh: "Spring Boot + Vue3 前后端分离，含 RBAC、会员、营销与报表，约 10 万字文档。", en: "Spring Boot + Vue3, with RBAC, membership, marketing, and reporting; ~100k characters of docs." } },
