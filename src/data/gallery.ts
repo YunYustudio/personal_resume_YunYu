@@ -29,14 +29,20 @@ export const galleryItems: GalleryItem[] = [
   { category: "forum", project: { zh: "看雪校园论坛", en: "Kanxue Campus Forum" }, title: { zh: "帖子列表", en: "Post List" }, src: "assets/images/forum/forum-07.webp", shape: "phone" },
 
   // ---------------- 内部 ERP ----------------
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "人事绩效薪资统计", en: "HR Performance and Salary Statistics" }, src: "assets/images/yunyu-erp/yunyu-erp-01.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同展示列表", en: "Contract List" }, src: "assets/images/yunyu-erp/yunyu-erp-02.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同详情展示", en: "Contract Detail" }, src: "assets/images/yunyu-erp/yunyu-erp-03.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "客户管理模块", en: "Customer Management Module" }, src: "assets/images/yunyu-erp/yunyu-erp-04.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "登录页", en: "Login Page" }, src: "assets/images/yunyu-erp/yunyu-erp-05.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "知识库空间", en: "Knowledge-Base Space" }, src: "assets/images/yunyu-erp/yunyu-erp-06.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目关联任务管理", en: "Project-Task Association" }, src: "assets/images/yunyu-erp/yunyu-erp-07.webp" },
-  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目管理", en: "Project Management" }, src: "assets/images/yunyu-erp/yunyu-erp-08.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "登录页", en: "Login Page" }, src: "assets/images/yunyu-erp/yunyu-erp-01.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "平台后台用户管理", en: "Platform Admin User Management" }, src: "assets/images/yunyu-erp/yunyu-erp-02.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "角色与菜单权限", en: "Role and Menu Permissions" }, src: "assets/images/yunyu-erp/yunyu-erp-03.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "客户详情与门户账号", en: "Customer Detail and Portal Account" }, src: "assets/images/yunyu-erp/yunyu-erp-04.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同管理列表", en: "Contract List" }, src: "assets/images/yunyu-erp/yunyu-erp-05.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "合同详情与条款", en: "Contract Detail and Terms" }, src: "assets/images/yunyu-erp/yunyu-erp-06.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "销售申报", en: "Sales Declaration" }, src: "assets/images/yunyu-erp/yunyu-erp-07.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "采购订单", en: "Purchase Orders" }, src: "assets/images/yunyu-erp/yunyu-erp-08.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "账单与收支总览", en: "Billing and Cash-Flow Overview" }, src: "assets/images/yunyu-erp/yunyu-erp-09.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "人事绩效薪资统计", en: "HR Performance and Salary Statistics" }, src: "assets/images/yunyu-erp/yunyu-erp-10.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "项目管理", en: "Project Management" }, src: "assets/images/yunyu-erp/yunyu-erp-11.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "任务管理", en: "Task Management" }, src: "assets/images/yunyu-erp/yunyu-erp-12.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "知识库文章", en: "Knowledge-Base Articles" }, src: "assets/images/yunyu-erp/yunyu-erp-13.webp" },
+  { category: "yunyu-erp", project: { zh: "蕴宇 ERP", en: "YunYu ERP" }, title: { zh: "知识库拓扑图", en: "Knowledge-Base Graph" }, src: "assets/images/yunyu-erp/yunyu-erp-14.webp" },
 
   // ---------------- 生鲜商城 ----------------
   { category: "fresh-mall", project: { zh: "生鲜商城小程序", en: "Fresh Mall Mini-Program" }, title: { zh: "运营后台首页", en: "Admin Dashboard" }, src: "assets/images/fresh-mall/fresh-mall-admin-01.webp" },

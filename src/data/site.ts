@@ -3,7 +3,7 @@ import type { TimelineEntry } from "./types";
 // 核心数据条
 export const stats = [
   { value: "237", labelKey: "stats.tasks" },
-  { value: "116", labelKey: "stats.shots" },
+  { value: "122", labelKey: "stats.shots" },
   { value: "100k+", labelKey: "stats.docs" },
   { value: "8", labelKey: "stats.projects" },
 ];

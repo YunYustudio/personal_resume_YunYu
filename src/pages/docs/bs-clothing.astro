@@ -23,7 +23,8 @@ for (const line of raw.split("\n")) {
   const m = /^(#{2,3})\s+(.+?)\s*$/.exec(line);
   if (!m) continue;
   const depth = m[1].length;
-  const text = m[2].replace(/[*_`]/g, "").trim();
+  // 只剥离 markdown 强调标记与行内代码反引号，保留下划线等字符（slug 需与渲染出的 heading id 完全一致）
+  const text = m[2].replace(/[*`]/g, "").trim();
   toc.push({ depth, slug: slugger.slug(text), text });
 }
 
@@ -51,7 +52,7 @@ const pageDesc =
       </aside>
 
       <article class="doc-main">
-        <a class="doc-back" href={withBase("")}>
+        <a class="doc-back" href={withBase("/")}>
           <span aria-hidden="true">←</span>
           <span data-i18n="doc.back">{ui.zh["doc.back"]}</span>
         </a>
